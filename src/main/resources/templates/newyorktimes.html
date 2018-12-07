@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>NYT</title>
+</head>
+<body>
+	<h1>New York times</h1>
+	<p th:text="'API key: ' + ${key}" />
+	<p th:text="'HTML: ' + ${html}" />
+	
+	<p><a href="index">Return</a></p>
+</body>
+</html>
