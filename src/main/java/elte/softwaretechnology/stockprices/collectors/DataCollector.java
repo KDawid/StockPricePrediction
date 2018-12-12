@@ -5,7 +5,7 @@ import org.apache.commons.httpclient.NameValuePair;
 
 import java.time.format.DateTimeFormatter;
 
-public abstract class BaseDataCollector {
+public abstract class DataCollector {
 	public String queryContent(QueryParameters queryParameters) {
 		return WebUtil.querySite(getUrl(), getParams(queryParameters));
 	}

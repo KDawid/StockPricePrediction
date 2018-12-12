@@ -3,7 +3,7 @@ package elte.softwaretechnology.stockprices.collectors;
 import org.apache.commons.httpclient.NameValuePair;
 import org.springframework.beans.factory.annotation.Value;
 
-public class NewYorkTimesDataCollector extends BaseDataCollector {
+public class NewYorkTimesDataCollector extends DataCollector {
 
 	@Value("${new.york.times.api.link}")
 	private String newYorkTimesLink;
