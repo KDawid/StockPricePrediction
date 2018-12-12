@@ -1,12 +1,13 @@
 package elte.softwaretechnology.stockprices.controllers;
 
+import elte.softwaretechnology.stockprices.collectors.NewYorkTimesDataCollector;
+import elte.softwaretechnology.stockprices.collectors.QueryParameters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 
-import elte.softwaretechnology.stockprices.collector.NewYorkTimesDataCollector;
+import java.time.LocalDate;
 
 @Controller
 public class StockPricesController {
@@ -14,21 +15,21 @@ public class StockPricesController {
 	@Autowired
 	private NewYorkTimesDataCollector newYorkTimesDataCollector;
 
-	@RequestMapping(path = "/", method = RequestMethod.GET)
+	@GetMapping(path = "/")
 	public String getHome() {
 		
 		return "index";
 	}
-	
-	@RequestMapping(path = "/index", method = RequestMethod.GET)
+
+	@GetMapping(path = "/index")
 	public String getIndex() {
 		return "index";
 	}
-	
-	@RequestMapping(path = "/newyorktimes", method = RequestMethod.GET)
+
+	@GetMapping(path = "/newyorktimes")
 	public String getNewYorkTimesApi(Model model) {
 		model.addAttribute("key", newYorkTimesDataCollector.getKey());
-		model.addAttribute("html", newYorkTimesDataCollector.getHTML());
+		model.addAttribute("html", newYorkTimesDataCollector.queryContent(new QueryParameters(LocalDate.of(2015, 02, 20), LocalDate.of(2015, 02, 21)).addKeyWord("apple")));
 		return "newyorktimes";
 	}
 }

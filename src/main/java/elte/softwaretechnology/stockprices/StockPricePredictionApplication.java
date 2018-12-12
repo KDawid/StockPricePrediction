@@ -1,10 +1,9 @@
 package elte.softwaretechnology.stockprices;
 
+import elte.softwaretechnology.stockprices.collectors.NewYorkTimesDataCollector;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import elte.softwaretechnology.stockprices.collector.NewYorkTimesDataCollector;
 
 @SpringBootApplication
 public class StockPricePredictionApplication {
