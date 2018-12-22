@@ -1,0 +1,385 @@
+{
+  "status": "OK",
+  "copyright": "Copyright (c) 2018 The New York Times Company. All Rights Reserved.",
+  "response": {
+    "docs": [
+      {
+        "web_url": "https://www.nytimes.com/2015/02/20/arts/spare-times-for-children-for-feb-20-26.html",
+        "snippet": "A selected guide to cultural events and activities for children, teenagers and families in New York City.",
+        "print_page": "18",
+        "blog": {},
+        "source": "The New York Times",
+        "multimedia": [],
+        "headline": {
+          "main": "Spare Times for Children for Feb. 20-26",
+          "kicker": null,
+          "content_kicker": null,
+          "print_headline": "Spare Times for Children",
+          "name": null,
+          "seo": null,
+          "sub": null
+        },
+        "keywords": [
+          {
+            "name": "subject",
+            "value": "Children and Childhood",
+            "rank": 1,
+            "major": null
+          },
+          {
+            "name": "subject",
+            "value": "Culture (Arts)",
+            "rank": 2,
+            "major": null
+          }
+        ],
+        "pub_date": "2015-02-20T00:00:00Z",
+        "document_type": "article",
+        "news_desk": "Weekend",
+        "byline": {
+          "original": "By LAUREL GRAEBER",
+          "person": [
+            {
+              "firstname": "Laurel",
+              "middlename": null,
+              "lastname": "GRAEBER",
+              "qualifier": null,
+              "title": null,
+              "role": "reported",
+              "organization": "",
+              "rank": 1
+            }
+          ],
+          "organization": null
+        },
+        "type_of_material": "Schedule",
+        "_id": "54e6850138f0d8592c215a96",
+        "word_count": 3674,
+        "score": 2.5064845
+      },
+      {
+        "web_url": "https://www.nytimes.com/2015/02/20/business/media/the-times-company-announces-board-nominees-with-web-credentials.html",
+        "snippet": "The New York Times Company announced two new nominees for its board, Dara Khosrowshahi, the chief executive of Expedia, and Rebecca Van Dyck, a Facebook executive.",
+        "abstract": "New York Times Company announces two nominees for its board, Dara Khosrowshahi, chief executive of Expedia, and Rebecca Van Dyck, Facebook executive.",
+        "print_page": "2",
+        "blog": {},
+        "source": "The New York Times",
+        "multimedia": [],
+        "headline": {
+          "main": "The Times Company Announces Board Nominees With Web Credentials",
+          "kicker": null,
+          "content_kicker": null,
+          "print_headline": "The Times Company Announces Board Nominees With Web Credentials",
+          "name": null,
+          "seo": null,
+          "sub": null
+        },
+        "keywords": [
+          {
+            "name": "organizations",
+            "value": "New York Times Company",
+            "rank": 1,
+            "major": null
+          },
+          {
+            "name": "persons",
+            "value": "Khosrowshahi, Dara",
+            "rank": 2,
+            "major": null
+          },
+          {
+            "name": "subject",
+            "value": "Boards of Directors",
+            "rank": 3,
+            "major": null
+          },
+          {
+            "name": "subject",
+            "value": "Appointments and Executive Changes",
+            "rank": 4,
+            "major": null
+          },
+          {
+            "name": "persons",
+            "value": "Van Dyck, Rebecca",
+            "rank": 5,
+            "major": null
+          }
+        ],
+        "pub_date": "2015-02-20T00:00:00Z",
+        "document_type": "article",
+        "news_desk": "Business",
+        "section_name": "Media",
+        "byline": {
+          "original": "By RAVI SOMAIYA",
+          "person": [
+            {
+              "firstname": "Ravi",
+              "middlename": null,
+              "lastname": "SOMAIYA",
+              "qualifier": null,
+              "title": null,
+              "role": "reported",
+              "organization": "",
+              "rank": 1
+            }
+          ],
+          "organization": null
+        },
+        "type_of_material": "News",
+        "_id": "54e6879d38f0d8592c215aa1",
+        "word_count": 317,
+        "score": 11.105539
+      },
+      {
+        "web_url": "https://www.nytimes.com/2015/02/20/technology/auto-team-is-forming-at-apple.html",
+        "snippet": "The company has collected about 200 people over the last few years to develop technologies for an electric car, according to two people with knowledge of the company&#8217;s plans.",
+        "abstract": "Apple has reportedly gathered about 200 people over past few years to develop technologies for electric car.",
+        "print_page": "3",
+        "blog": {},
+        "source": "The New York Times",
+        "multimedia": [
+          {
+            "rank": 0,
+            "subtype": "wide",
+            "caption": null,
+            "credit": null,
+            "type": "image",
+            "url": "images/2015/02/21/technology/21apple-pic/21apple-pic-thumbWide.jpg",
+            "height": 126,
+            "width": 190,
+            "legacy": {
+              "wide": "images/2015/02/21/technology/21apple-pic/21apple-pic-thumbWide.jpg",
+              "wideheight": "126",
+              "widewidth": "190"
+            },
+            "subType": "wide",
+            "crop_name": null
+          },
+          {
+            "rank": 0,
+            "subtype": "xlarge",
+            "caption": null,
+            "credit": null,
+            "type": "image",
+            "url": "images/2015/02/21/technology/21apple-pic/21apple-pic-articleLarge.jpg",
+            "height": 400,
+            "width": 600,
+            "legacy": {
+              "xlargewidth": "600",
+              "xlarge": "images/2015/02/21/technology/21apple-pic/21apple-pic-articleLarge.jpg",
+              "xlargeheight": "400"
+            },
+            "subType": "xlarge",
+            "crop_name": null
+          },
+          {
+            "rank": 0,
+            "subtype": "thumbnail",
+            "caption": null,
+            "credit": null,
+            "type": "image",
+            "url": "images/2015/02/21/technology/21apple-pic/21apple-pic-thumbStandard.jpg",
+            "height": 75,
+            "width": 75,
+            "legacy": {
+              "thumbnailheight": "75",
+              "thumbnail": "images/2015/02/21/technology/21apple-pic/21apple-pic-thumbStandard.jpg",
+              "thumbnailwidth": "75"
+            },
+            "subType": "thumbnail",
+            "crop_name": null
+          }
+        ],
+        "headline": {
+          "main": "Apple Is Forming an Auto Team",
+          "kicker": null,
+          "content_kicker": null,
+          "print_headline": "Auto Team Is Forming at Apple",
+          "name": null,
+          "seo": null,
+          "sub": null
+        },
+        "keywords": [
+          {
+            "name": "organizations",
+            "value": "Apple Inc",
+            "rank": 1,
+            "major": null
+          },
+          {
+            "name": "subject",
+            "value": "Electric and Hybrid Vehicles",
+            "rank": 2,
+            "major": null
+          }
+        ],
+        "pub_date": "2015-02-20T00:00:00Z",
+        "document_type": "article",
+        "news_desk": "Business",
+        "byline": {
+          "original": "By BRIAN X. CHEN and MIKE ISAAC",
+          "person": [
+            {
+              "firstname": "Brian",
+              "middlename": "X.",
+              "lastname": "CHEN",
+              "qualifier": null,
+              "title": null,
+              "role": "reported",
+              "organization": "",
+              "rank": 1
+            },
+            {
+              "firstname": "Mike",
+              "middlename": null,
+              "lastname": "ISAAC",
+              "qualifier": null,
+              "title": null,
+              "role": "reported",
+              "organization": "",
+              "rank": 2
+            }
+          ],
+          "organization": null
+        },
+        "type_of_material": "News",
+        "_id": "54e69f3e38f0d8592c215ae4",
+        "word_count": 366,
+        "score": 106.62535
+      },
+      {
+        "web_url": "https://www.nytimes.com/paidpost/emirates/now-boarding.html",
+        "snippet": "Discover how travel inspires these people to do what they love.",
+        "blog": {},
+        "multimedia": [],
+        "headline": {
+          "main": "Now Boarding",
+          "kicker": null,
+          "content_kicker": null,
+          "print_headline": null,
+          "name": null,
+          "seo": null,
+          "sub": null
+        },
+        "keywords": [],
+        "pub_date": "2015-02-20T20:08:34+0000",
+        "document_type": "paidpost",
+        "byline": {
+          "original": null,
+          "person": null,
+          "organization": null
+        },
+        "_id": "54e7944a38f0d80c5b84bc94",
+        "word_count": 1910,
+        "score": 4.317412,
+        "uri": "nyt://paidpost/bccb5cd6-dbea-5460-916f-6ecfc4a5bca0"
+      },
+      {
+        "web_url": "https://wordplay.blogs.nytimes.com/2015/02/20/animated-character-whos-five-apples-tall/",
+        "snippet": "The team of Brad Wilber and Doug Peterson is back.",
+        "abstract": "The team of Brad Wilber and Doug Peterson is back.",
+        "blog": {},
+        "source": "The New York Times",
+        "multimedia": [
+          {
+            "rank": 0,
+            "subtype": "wide",
+            "caption": null,
+            "credit": null,
+            "type": "image",
+            "url": "images/2015/02/20/crosswords/0220classjpg/0220classjpg-thumbWide.jpg",
+            "height": 126,
+            "width": 190,
+            "legacy": {
+              "wide": "images/2015/02/20/crosswords/0220classjpg/0220classjpg-thumbWide.jpg",
+              "wideheight": "126",
+              "widewidth": "190"
+            },
+            "subType": "wide",
+            "crop_name": null
+          },
+          {
+            "rank": 0,
+            "subtype": "xlarge",
+            "caption": null,
+            "credit": null,
+            "type": "image",
+            "url": "images/2015/02/20/crosswords/0220classjpg/0220classjpg-articleLarge.jpg",
+            "height": 400,
+            "width": 600,
+            "legacy": {
+              "xlargewidth": "600",
+              "xlarge": "images/2015/02/20/crosswords/0220classjpg/0220classjpg-articleLarge.jpg",
+              "xlargeheight": "400"
+            },
+            "subType": "xlarge",
+            "crop_name": null
+          },
+          {
+            "rank": 0,
+            "subtype": "thumbnail",
+            "caption": null,
+            "credit": null,
+            "type": "image",
+            "url": "images/2015/02/20/crosswords/0220classjpg/0220classjpg-thumbStandard.jpg",
+            "height": 75,
+            "width": 75,
+            "legacy": {
+              "thumbnailheight": "75",
+              "thumbnail": "images/2015/02/20/crosswords/0220classjpg/0220classjpg-thumbStandard.jpg",
+              "thumbnailwidth": "75"
+            },
+            "subType": "thumbnail",
+            "crop_name": null
+          }
+        ],
+        "headline": {
+          "main": "Animated Character Who&#8217;s Five Apples Tall",
+          "kicker": "Wordplay",
+          "content_kicker": null,
+          "print_headline": null,
+          "name": null,
+          "seo": null,
+          "sub": null
+        },
+        "keywords": [
+          {
+            "name": "subject",
+            "value": "Crossword Puzzles",
+            "rank": 1,
+            "major": null
+          }
+        ],
+        "pub_date": "2015-02-20T22:00:23Z",
+        "document_type": "blogpost",
+        "news_desk": "Business",
+        "byline": {
+          "original": "By DEB AMLEN",
+          "person": [
+            {
+              "firstname": "Deb",
+              "middlename": null,
+              "lastname": "AMLEN",
+              "qualifier": null,
+              "title": null,
+              "role": "reported",
+              "organization": "",
+              "rank": 1
+            }
+          ],
+          "organization": null
+        },
+        "type_of_material": "Blog",
+        "_id": "54e7f50a38f0d80c5b84bdce",
+        "word_count": 601,
+        "score": 57.939568
+      }
+    ],
+    "meta": {
+      "hits": 5,
+      "offset": 0,
+      "time": 12
+    }
+  }
+}
