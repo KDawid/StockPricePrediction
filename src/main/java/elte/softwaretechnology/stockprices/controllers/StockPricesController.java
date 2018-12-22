@@ -32,12 +32,12 @@ public class StockPricesController {
 	public String getNewYorkTimesApi(Model model) {
 		DataCollector dataCollector = dataCollectorFactory.createOrRetrieveDataCollector(newYorkTimes);
 		model.addAttribute("key", dataCollector.getKey());
-		QueryParameters queryParameters = new QueryParameters(LocalDate.of(2015, 2, 20), LocalDate.of(2016, 2, 20))
+		QueryParameters queryParameters = new QueryParameters(LocalDate.of(2009, 1, 1), LocalDate.of(2018, 12, 21))
 						.addMayHaveKeyWord("IOS")
+						.addMayHaveKeyWord("OS X")
 						.addMayHaveKeyWord("IPAD")
 						.addMayHaveKeyWord("MAC")
 						.addMayHaveKeyWord("STEVE JOBS")
-						.addMayHaveKeyWord("MOBILE")
 						.addMayHaveKeyWord("SMART PHONE")
 						.addMayHaveKeyWord("ITUNES")
 						.addMayHaveKeyWord("APP STORE")
