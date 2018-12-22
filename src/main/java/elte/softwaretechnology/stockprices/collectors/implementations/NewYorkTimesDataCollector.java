@@ -1,19 +1,20 @@
-package elte.softwaretechnology.stockprices.collectors;
+package elte.softwaretechnology.stockprices.collectors.implementations;
 
+import elte.softwaretechnology.stockprices.collectors.DataCollector;
+import elte.softwaretechnology.utils.QueryParameters;
 import org.apache.commons.httpclient.NameValuePair;
-import org.springframework.beans.factory.annotation.Value;
 
 public class NewYorkTimesDataCollector extends DataCollector {
+	private final String key;
 
-	@Value("${new.york.times.api.link}")
-	private String newYorkTimesLink;
-
-	@Value("${new.york.times.api.key}")
-	private String key;
+	public NewYorkTimesDataCollector(String newYorkTimesLink, String key) {
+		super(newYorkTimesLink);
+		this.key = key;
+	}
 
 	@Override
-	protected String getUrl() {
-		return newYorkTimesLink;
+	public String getKey() {
+		return key;
 	}
 
 	@Override
@@ -25,9 +26,5 @@ public class NewYorkTimesDataCollector extends DataCollector {
 						new NameValuePair("end_date", queryParameters.getEndDate().format(getDateFormatter())),
 						new NameValuePair("sort", "oldest")
 		};
-	}
-
-	public String getKey() {
-		return key;
 	}
 }

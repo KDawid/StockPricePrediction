@@ -22,7 +22,7 @@ public class WebUtil {
 		method.setQueryString(nameValuePairs);
 		try {
 			client.executeMethod(method);
-			System.out.println(method.getStatusCode());
+//			System.out.println(method.getStatusCode());
 			if (method.getStatusCode() == HttpStatus.SC_OK) {
 				InputStream is = method.getResponseBodyAsStream();
 

@@ -1,4 +1,4 @@
-package elte.softwaretechnology.stockprices.collectors;
+package elte.softwaretechnology.utils;
 
 import java.time.LocalDate;
 import java.util.HashSet;
