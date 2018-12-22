@@ -32,7 +32,19 @@ public class StockPricesController {
 	public String getNewYorkTimesApi(Model model) {
 		DataCollector dataCollector = dataCollectorFactory.createOrRetrieveDataCollector(newYorkTimes);
 		model.addAttribute("key", dataCollector.getKey());
-		model.addAttribute("html", dataCollector.queryContent(new QueryParameters(LocalDate.of(2015, 02, 20), LocalDate.of(2015, 02, 21)).addKeyWord("apple")));
+		QueryParameters queryParameters = new QueryParameters(LocalDate.of(2015, 2, 20), LocalDate.of(2016, 2, 20))
+						.addMayHaveKeyWord("IOS")
+						.addMayHaveKeyWord("IPAD")
+						.addMayHaveKeyWord("MAC")
+						.addMayHaveKeyWord("STEVE JOBS")
+						.addMayHaveKeyWord("MOBILE")
+						.addMayHaveKeyWord("SMART PHONE")
+						.addMayHaveKeyWord("ITUNES")
+						.addMayHaveKeyWord("APP STORE")
+						.addMayHaveKeyWord("IPHONE")
+						.addMayHaveKeyWord("AAPL")
+						.addMustHaveKeyWord("APPLE");
+		model.addAttribute("html", dataCollector.queryContent(queryParameters));
 		return newYorkTimes.getId();
 	}
 }
