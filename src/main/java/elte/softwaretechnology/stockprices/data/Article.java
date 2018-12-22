@@ -7,14 +7,21 @@ import java.util.List;
 public class Article {
 	private String snippet;
 	private String title;
-	private boolean kicker;
 	private List<KeyWord> keyWords = new ArrayList<>();
 	private LocalDateTime dateOfPublication;
 	private Integer wordCount;
-	private Integer score; //TODO: check if this should be excluded, or not
+	private Double score; //TODO: check if this should be excluded, or not
 
 	public void addKeyWord(KeyWord keyWord) {
 		keyWords.add(keyWord);
+	}
+
+	@Override
+	public String toString() {
+		return "Article{" +
+						"dateOfPublication='" + dateOfPublication + '\'' +
+						", title=" + title +
+						'}';
 	}
 
 	public String getSnippet() {
@@ -31,14 +38,6 @@ public class Article {
 
 	public void setTitle(String title) {
 		this.title = title;
-	}
-
-	public boolean isKicker() {
-		return kicker;
-	}
-
-	public void setKicker(boolean kicker) {
-		this.kicker = kicker;
 	}
 
 	public List<KeyWord> getKeyWords() {
@@ -65,11 +64,11 @@ public class Article {
 		this.wordCount = wordCount;
 	}
 
-	public Integer getScore() {
+	public Double getScore() {
 		return score;
 	}
 
-	public void setScore(Integer score) {
+	public void setScore(Double score) {
 		this.score = score;
 	}
 }

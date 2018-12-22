@@ -2,7 +2,14 @@ package elte.softwaretechnology.stockprices.data;
 
 public class KeyWord {
 	private String keyWord;
-	private Boolean major;
+	private String major;
+
+	@Override
+	public String toString() {
+		return "KeyWord{" +
+						"keyWord='" + keyWord + '\'' +
+						'}';
+	}
 
 	public String getKeyWord() {
 		return keyWord;
@@ -12,11 +19,11 @@ public class KeyWord {
 		this.keyWord = keyWord;
 	}
 
-	public Boolean getMajor() {
+	public String getMajor() {
 		return major;
 	}
 
-	public void setMajor(Boolean major) {
+	public void setMajor(String major) {
 		this.major = major;
 	}
 }
