@@ -9,6 +9,7 @@ public class QueryParameters {
 	private LocalDate endDate;
 	private Set<String> mustHaveKeyWords = new HashSet<>();
 	private Set<String> mayHaveKeyWords = new HashSet<>();
+	private Integer page = 0;
 
 	public QueryParameters(LocalDate startDate, LocalDate endDate) {
 		this.startDate = startDate;
@@ -71,5 +72,13 @@ public class QueryParameters {
 
 	public void setMustHaveKeyWords(Set<String> mustHaveKeyWords) {
 		this.mustHaveKeyWords = mustHaveKeyWords;
+	}
+
+	public void increasePage() {
+		++page;
+	}
+
+	public Integer getPage() {
+		return page;
 	}
 }

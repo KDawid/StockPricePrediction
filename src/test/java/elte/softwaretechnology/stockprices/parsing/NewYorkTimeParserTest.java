@@ -1,6 +1,7 @@
 package elte.softwaretechnology.stockprices.parsing;
 
 import elte.softwaretechnology.stockprices.data.Article;
+import elte.softwaretechnology.stockprices.data.Meta;
 import elte.softwaretechnology.stockprices.parsers.implementations.NewYorkTimesDataParser;
 import org.junit.Test;
 
@@ -16,7 +17,7 @@ import static org.junit.Assert.*;
 public class NewYorkTimeParserTest {
 	@Test
 	public void testResponseParsing() throws Exception {
-		List<Article> articles = new NewYorkTimesDataParser().parseRespone(readInput("new_york_times_response_example.txt"));
+		List<Article> articles = new NewYorkTimesDataParser().parseResponeData(readInput("new_york_times_response_example.txt"));
 		assertThat(articles, hasSize(5));
 		Article firstArticle = articles.get(0);
 		assertEquals("A selected guide to cultural events and activities for children, teenagers and families in New York City.", firstArticle.getSnippet());
@@ -28,10 +29,17 @@ public class NewYorkTimeParserTest {
 		assertEquals("Children and Childhood", firstArticle.getKeyWords().get(0).getKeyWord());
 		assertEquals("Culture (Arts)", firstArticle.getKeyWords().get(1).getKeyWord());
 
-		assertEquals(articles.get(1).toString(), "Article{dateOfPublication='2015-02-20T00:00', title=The Times Company Announces Board Nominees With Web Credentials}");
-		assertEquals(articles.get(2).toString(), "Article{dateOfPublication='2015-02-20T00:00', title=Apple Is Forming an Auto Team}");
-		assertEquals(articles.get(3).toString(), "Article{dateOfPublication='2015-02-20T20:08:34', title=Now Boarding}");
-		assertEquals(articles.get(4).toString(), "Article{dateOfPublication='2015-02-20T22:00:23', title=Animated Character Who&#8217;s Five Apples Tall}");
+		assertEquals("Article{dateOfPublication='2015-02-20T00:00', title=The Times Company Announces Board Nominees With Web Credentials}", articles.get(1).toString());
+		assertEquals("Article{dateOfPublication='2015-02-20T00:00', title=Apple Is Forming an Auto Team}", articles.get(2).toString());
+		assertEquals("Article{dateOfPublication='2015-02-20T20:08:34', title=Now Boarding}", articles.get(3).toString());
+		assertEquals("Article{dateOfPublication='2015-02-20T22:00:23', title=Animated Character Who&#8217;s Five Apples Tall}", articles.get(4).toString());
+	}
+
+	@Test
+	public void testMetaParsing() throws Exception {
+		Meta meta = new NewYorkTimesDataParser().parseResponeMeta(readInput("new_york_times_response_example.txt"));
+		assertEquals(5, (long)meta.getHits());
+		assertEquals(0, (long)meta.getOffset());
 	}
 
 	private String readInput(String fileName) throws IOException {

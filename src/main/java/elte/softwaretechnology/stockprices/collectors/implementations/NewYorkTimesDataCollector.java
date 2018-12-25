@@ -1,6 +1,8 @@
 package elte.softwaretechnology.stockprices.collectors.implementations;
 
 import elte.softwaretechnology.stockprices.collectors.DataCollector;
+import elte.softwaretechnology.stockprices.parsers.Parser;
+import elte.softwaretechnology.stockprices.parsers.implementations.NewYorkTimesDataParser;
 import elte.softwaretechnology.utils.QueryParameters;
 import org.apache.commons.httpclient.NameValuePair;
 
@@ -26,7 +28,8 @@ public class NewYorkTimesDataCollector extends DataCollector {
 						new NameValuePair("fq", getContentFilter(queryParameters)),
 						new NameValuePair("begin_date", queryParameters.getStartDate().format(getDateFormatter())),
 						new NameValuePair("end_date", queryParameters.getEndDate().format(getDateFormatter())),
-						new NameValuePair("sort", "oldest")
+						new NameValuePair("sort", "oldest"),
+						new NameValuePair("page", queryParameters.getPage().toString())
 		};
 	}
 
@@ -47,7 +50,21 @@ public class NewYorkTimesDataCollector extends DataCollector {
 			stringBuilder.append("body:(").append(String.join(" ", queryParameters.getMayHaveKeyWords())).append(")");
 		}
 
-		System.out.println(stringBuilder.toString());
 		return stringBuilder.toString();
+	}
+
+	@Override
+	protected int getAllowedQuerriesPerSec() {
+		return 1;
+	}
+
+	@Override
+	protected int getNrOfArticlesPerQuery() {
+		return 10;
+	}
+
+	@Override
+	protected Parser getParser() {
+		return new NewYorkTimesDataParser();
 	}
 }

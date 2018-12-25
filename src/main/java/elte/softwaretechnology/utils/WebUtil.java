@@ -14,9 +14,32 @@ import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 public class WebUtil {
-	public static String querySite(String url, NameValuePair... nameValuePairs) {
+	public static List<String> querySite(String url, int nrOfQueries, int allowedQuerriesPerSec, QueryParameters queryParameters, Function<QueryParameters, NameValuePair[]> queryParameterWrappingFunction) {
+		List<String> responses = new ArrayList<>();
+		for (int i = 1; i <= nrOfQueries; ++i) {
+			try {
+				responses.add(querySite(url, queryParameterWrappingFunction.apply(queryParameters)));
+				System.out.println("Query #" + i + " was successful.");
+				if (i % allowedQuerriesPerSec == 0) {
+					TimeUnit.SECONDS.sleep(1);
+				}
+			}
+			catch (Exception e) {
+				System.out.println("Querying failed after query: " + i + ".");
+				e.printStackTrace();
+			}
+			queryParameters.increasePage();
+		}
+		return responses;
+	}
+
+	private static String querySite(String url, NameValuePair... nameValuePairs) {
 		HttpClient client = new HttpClient();
 		HttpMethod method = new GetMethod(url);
 		method.setQueryString(nameValuePairs);
