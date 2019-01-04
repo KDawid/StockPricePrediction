@@ -1,11 +1,12 @@
 package elte.softwaretechnology.stockprices.parsers.implementations;
 
-import elte.softwaretechnology.stockprices.data.Article;
-import elte.softwaretechnology.stockprices.data.KeyWord;
-import elte.softwaretechnology.stockprices.data.Meta;
+import elte.softwaretechnology.stockprices.data.model.Article;
+import elte.softwaretechnology.stockprices.data.model.KeyWord;
+import elte.softwaretechnology.stockprices.data.model.Meta;
 import elte.softwaretechnology.stockprices.parsers.Parser;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -28,6 +29,7 @@ public class NewYorkTimesDataParser implements Parser {
 		return meta;
 	}
 
+	@Transactional
 	@Override
 	public List<Article> parseResponeData(String message) {
 		List<Article> articles = new ArrayList<>();
@@ -55,6 +57,7 @@ public class NewYorkTimesDataParser implements Parser {
 				keyWord.setMajor(getStringValueFromJSON(jsonKeyword, "major"));
 			}
 		}
+
 		return articles;
 	}
 

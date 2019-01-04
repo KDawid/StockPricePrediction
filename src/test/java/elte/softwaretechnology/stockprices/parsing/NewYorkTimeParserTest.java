@@ -1,7 +1,7 @@
 package elte.softwaretechnology.stockprices.parsing;
 
-import elte.softwaretechnology.stockprices.data.Article;
-import elte.softwaretechnology.stockprices.data.Meta;
+import elte.softwaretechnology.stockprices.data.model.Article;
+import elte.softwaretechnology.stockprices.data.model.Meta;
 import elte.softwaretechnology.stockprices.parsers.implementations.NewYorkTimesDataParser;
 import org.junit.Test;
 

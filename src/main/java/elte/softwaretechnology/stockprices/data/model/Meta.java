@@ -1,4 +1,4 @@
-package elte.softwaretechnology.stockprices.data;
+package elte.softwaretechnology.stockprices.data.model;
 
 public class Meta {
 	private Integer hits;

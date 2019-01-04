@@ -4,7 +4,7 @@ import elte.softwaretechnology.utils.Identifiable;
 
 public enum DataCollectorType implements Identifiable<String> {
 
-	newYorkTimes("newyorktimes");
+	NewYorkTimes("newyorktimes");
 
 	private final String name;
 
