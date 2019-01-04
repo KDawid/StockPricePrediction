@@ -42,6 +42,14 @@ public class QueryParameters {
 		return this;
 	}
 
+	public void increasePage() {
+		++page;
+	}
+
+	public void resetPage() {
+		page = 0;
+	}
+
 	public LocalDate getStartDate() {
 		return startDate;
 	}
@@ -72,10 +80,6 @@ public class QueryParameters {
 
 	public void setMustHaveKeyWords(Set<String> mustHaveKeyWords) {
 		this.mustHaveKeyWords = mustHaveKeyWords;
-	}
-
-	public void increasePage() {
-		++page;
 	}
 
 	public Integer getPage() {

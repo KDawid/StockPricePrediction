@@ -1,6 +1,7 @@
 package elte.softwaretechnology.stockprices.collectors;
 
-import elte.softwaretechnology.stockprices.data.Meta;
+import elte.softwaretechnology.stockprices.data.model.Meta;
+import elte.softwaretechnology.stockprices.data.model.QueryResponse;
 import elte.softwaretechnology.stockprices.parsers.Parser;
 import elte.softwaretechnology.utils.QueryParameters;
 import elte.softwaretechnology.utils.WebUtil;
@@ -9,26 +10,27 @@ import org.apache.commons.httpclient.NameValuePair;
 import java.time.format.DateTimeFormatter;
 
 public abstract class DataCollector {
-
 	private final String url;
 
 	public DataCollector(String url) {
 		this.url = url;
 	}
 
-	public String queryContent(QueryParameters queryParameters) {
+	public QueryResponse queryContent(QueryParameters queryParameters) {
 		Parser parser = getParser();
 		Meta meta = parser.parseResponeMeta(WebUtil.querySite(getUrl(), 1, getAllowedQuerriesPerSec(), queryParameters, this::getParams).get(0));
 		System.out.println(meta);
-		StringBuilder content = new StringBuilder();
+		QueryResponse queryResponse = new QueryResponse(meta);
+		queryParameters.resetPage();
 		WebUtil.querySite(getUrl(), getNrOfRequiredQueries(meta), getAllowedQuerriesPerSec(), queryParameters, this::getParams)
 						.forEach(message -> {
-											parser.parseResponeData(message);
-											content.append(message).append("/n");
+							queryResponse.addArticles(parser.parseResponeData(message));
+							queryResponse.addParsedMessage(message);
+							queryResponse.addParsedMessage("/n");
 										}
 
 						);
-		return content.toString();
+		return queryResponse;
 	}
 
 	private int getNrOfRequiredQueries(Meta meta) {

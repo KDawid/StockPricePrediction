@@ -1,15 +1,43 @@
-package elte.softwaretechnology.stockprices.data;
+package elte.softwaretechnology.stockprices.data.model;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Article {
+@Entity
+@Table(name = "article")
+public class Article { //TODO ADD LINK
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@Column(name = "id")
+	private Long id;
+
+	@Column(name = "snippet")
 	private String snippet;
+
+	@Column(name = "title", nullable = false)
 	private String title;
+
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "article")
 	private List<KeyWord> keyWords = new ArrayList<>();
+
+	@Column(name = "dateOfPublication", nullable = false)
 	private LocalDateTime dateOfPublication;
+
+	@Column(name = "wordCount")
 	private Integer wordCount;
+
+	@Column(name = "score")
 	private Double score; //TODO: check if this should be excluded, or not
 
 	public void addKeyWord(KeyWord keyWord) {
@@ -22,6 +50,14 @@ public class Article {
 						"dateOfPublication='" + dateOfPublication + '\'' +
 						", title=" + title +
 						'}';
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getSnippet() {
