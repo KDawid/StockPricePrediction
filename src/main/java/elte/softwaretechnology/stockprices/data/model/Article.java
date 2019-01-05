@@ -21,7 +21,7 @@ public class Article {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "snippet")
+    @Column(name = "snippet", columnDefinition="TEXT")
     private String snippet;
 
     @Column(name = "url", nullable = false)

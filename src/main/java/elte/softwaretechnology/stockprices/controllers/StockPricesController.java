@@ -44,7 +44,7 @@ public class StockPricesController {
 	public String getNewYorkTimesApi(Model model) {
 		DataCollector dataCollector = dataCollectorFactory.createOrRetrieveDataCollector(NewYorkTimes);
 		model.addAttribute("key", dataCollector.getKey());
-		QueryParameter queryParameter = new QueryParameter(LocalDate.of(2010, 1, 2), LocalDate.of(2015, 1, 1))
+		QueryParameter queryParameter = new QueryParameter(LocalDate.of(2009, 1, 1), LocalDate.of(2009, 1, 9))
 						.addMayHaveKeyWord("IOS")
 						.addMayHaveKeyWord("OS X")
 						.addMayHaveKeyWord("IPAD")
