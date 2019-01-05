@@ -3,9 +3,10 @@ package elte.softwaretechnology.stockprices.collectors.implementations;
 import elte.softwaretechnology.stockprices.collectors.DataCollector;
 import elte.softwaretechnology.stockprices.parsers.Parser;
 import elte.softwaretechnology.stockprices.parsers.implementations.NewYorkTimesDataParser;
-import elte.softwaretechnology.utils.QueryParameters;
+import elte.softwaretechnology.stockprices.data.model.QueryParameter;
 import org.apache.commons.httpclient.NameValuePair;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class NewYorkTimesDataCollector extends DataCollector {
@@ -22,20 +23,20 @@ public class NewYorkTimesDataCollector extends DataCollector {
 	}
 
 	@Override
-	protected NameValuePair[] getParams(QueryParameters queryParameters) {
+	protected NameValuePair[] getParams(QueryParameter queryParameter) {
 		return new NameValuePair[] {
 						new NameValuePair("api-key", key),
-						new NameValuePair("fq", getContentFilter(queryParameters)),
-						new NameValuePair("begin_date", queryParameters.getStartDate().format(getDateFormatter())),
-						new NameValuePair("end_date", queryParameters.getEndDate().format(getDateFormatter())),
+						new NameValuePair("fq", getContentFilter(queryParameter)),
+						new NameValuePair("begin_date", queryParameter.getStartDate().format(getDateFormatter())),
+						new NameValuePair("end_date", queryParameter.getEndDate().format(getDateFormatter())),
 						new NameValuePair("sort", "oldest"),
-						new NameValuePair("page", queryParameters.getPage().toString())
+						new NameValuePair("page", queryParameter.getNextPage().toString())
 		};
 	}
 
-	private String getContentFilter(QueryParameters queryParameters) {
+	private String getContentFilter(QueryParameter queryParameter) {
 		StringBuilder stringBuilder = new StringBuilder();
-		Iterator mustHaveKeyWords = queryParameters.getMustHaveKeyWords().iterator();
+		Iterator mustHaveKeyWords = Arrays.asList(queryParameter.getMustHaveKeyWords()).iterator();
 		while (mustHaveKeyWords.hasNext()) {
 			stringBuilder.append("body:(").append(mustHaveKeyWords.next()).append(") ");
 			if (mustHaveKeyWords.hasNext()) {
@@ -43,11 +44,11 @@ public class NewYorkTimesDataCollector extends DataCollector {
 			}
 		}
 
-		if (!queryParameters.getMayHaveKeyWords().isEmpty()) {
+		if (queryParameter.getMayHaveKeyWords().length != 0) {
 			if (stringBuilder.length() != 0) {
 				stringBuilder.append("AND ");//note that one of the may have values have to be contained
 			}
-			stringBuilder.append("body:(").append(String.join(" ", queryParameters.getMayHaveKeyWords())).append(")");
+			stringBuilder.append("body:(").append(String.join(" ", queryParameter.getMayHaveKeyWords())).append(")");
 		}
 
 		return stringBuilder.toString();

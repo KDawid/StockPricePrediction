@@ -15,96 +15,107 @@ import java.util.List;
 
 @Entity
 @Table(name = "article")
-public class Article { //TODO ADD LINK
-	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@Column(name = "id")
-	private Long id;
+public class Article {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id")
+    private Long id;
 
-	@Column(name = "snippet")
-	private String snippet;
+    @Column(name = "snippet")
+    private String snippet;
 
-	@Column(name = "title", nullable = false)
-	private String title;
+    @Column(name = "url", nullable = false)
+    private String url;
 
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "article")
-	private List<KeyWord> keyWords = new ArrayList<>();
+    @Column(name = "title", nullable = false)
+    private String title;
 
-	@Column(name = "dateOfPublication", nullable = false)
-	private LocalDateTime dateOfPublication;
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "article_id")
+    private List<KeyWord> keyWords = new ArrayList<>();
 
-	@Column(name = "wordCount")
-	private Integer wordCount;
+    @Column(name = "dateOfPublication", nullable = false)
+    private LocalDateTime dateOfPublication;
 
-	@Column(name = "score")
-	private Double score; //TODO: check if this should be excluded, or not
+    @Column(name = "wordCount")
+    private Integer wordCount;
 
-	public void addKeyWord(KeyWord keyWord) {
-		keyWords.add(keyWord);
-	}
+    @Column(name = "score")
+    private Double score; //TODO: check if this should be excluded, or not
 
-	@Override
-	public String toString() {
-		return "Article{" +
-						"dateOfPublication='" + dateOfPublication + '\'' +
-						", title=" + title +
-						'}';
-	}
+    public void addKeyWord(KeyWord keyWord) {
+        keyWords.add(keyWord);
+    }
 
-	public Long getId() {
-		return id;
-	}
+    @Override
+    public String toString() {
+        return "Article{" +
+                "dateOfPublication='" + dateOfPublication + '\'' +
+                ", title=" + title +
+                '}';
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public String getUrl() {
+        return url;
+    }
 
-	public String getSnippet() {
-		return snippet;
-	}
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
-	public void setSnippet(String snippet) {
-		this.snippet = snippet;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public String getSnippet() {
+        return snippet;
+    }
 
-	public List<KeyWord> getKeyWords() {
-		return keyWords;
-	}
+    public void setSnippet(String snippet) {
+        this.snippet = snippet;
+    }
 
-	public void setKeyWords(List<KeyWord> keyWords) {
-		this.keyWords = keyWords;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public LocalDateTime getDateOfPublication() {
-		return dateOfPublication;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public void setDateOfPublication(LocalDateTime dateOfPublication) {
-		this.dateOfPublication = dateOfPublication;
-	}
+    public List<KeyWord> getKeyWords() {
+        return keyWords;
+    }
 
-	public Integer getWordCount() {
-		return wordCount;
-	}
+    public void setKeyWords(List<KeyWord> keyWords) {
+        this.keyWords = keyWords;
+    }
 
-	public void setWordCount(Integer wordCount) {
-		this.wordCount = wordCount;
-	}
+    public LocalDateTime getDateOfPublication() {
+        return dateOfPublication;
+    }
 
-	public Double getScore() {
-		return score;
-	}
+    public void setDateOfPublication(LocalDateTime dateOfPublication) {
+        this.dateOfPublication = dateOfPublication;
+    }
 
-	public void setScore(Double score) {
-		this.score = score;
-	}
+    public Integer getWordCount() {
+        return wordCount;
+    }
+
+    public void setWordCount(Integer wordCount) {
+        this.wordCount = wordCount;
+    }
+
+    public Double getScore() {
+        return score;
+    }
+
+    public void setScore(Double score) {
+        this.score = score;
+    }
 }

@@ -18,7 +18,7 @@ public class KeyWord {
 	@Column(name = "keyword", nullable = false)
 	private String keyWord;
 
-	@Column(name = "major", nullable = false)
+	@Column(name = "major")
 	private String major;
 
 	@Override
