@@ -2,7 +2,7 @@ package elte.softwaretechnology.stockprices.parsing;
 
 import elte.softwaretechnology.stockprices.data.model.Article;
 import elte.softwaretechnology.stockprices.data.model.Meta;
-import elte.softwaretechnology.stockprices.parsers.implementations.NewYorkTimesDataParser;
+import elte.softwaretechnology.stockprices.parsers.implementations.NewYorkTimesDataMessageParser;
 import org.junit.Test;
 
 import java.io.File;
@@ -14,10 +14,10 @@ import static java.lang.Math.abs;
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.*;
 
-public class NewYorkTimeParserTest {
+public class NewYorkTimeMessageParserTest {
     @Test
     public void testResponseParsing() throws Exception {
-        List<Article> articles = new NewYorkTimesDataParser().parseResponeData(readInput("new_york_times_response_example.txt"));
+			List<Article> articles = new NewYorkTimesDataMessageParser().parseResponeData(readInput("new_york_times_response_example.txt"));
         assertThat(articles, hasSize(5));
         Article firstArticle = articles.get(0);
         assertEquals("https://www.nytimes.com/2015/02/20/arts/spare-times-for-children-for-feb-20-26.html", firstArticle.getUrl());
@@ -38,7 +38,7 @@ public class NewYorkTimeParserTest {
 
     @Test
     public void testMetaParsing() throws Exception {
-        Meta meta = new NewYorkTimesDataParser().parseResponeMeta(readInput("new_york_times_response_example.txt"));
+			Meta meta = new NewYorkTimesDataMessageParser().parseResponeMeta(readInput("new_york_times_response_example.txt"));
         assertEquals(5, (long) meta.getHits());
         assertEquals(0, (long) meta.getOffset());
     }

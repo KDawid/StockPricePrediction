@@ -3,7 +3,7 @@ package elte.softwaretechnology.stockprices.parsers.implementations;
 import elte.softwaretechnology.stockprices.data.model.Article;
 import elte.softwaretechnology.stockprices.data.model.KeyWord;
 import elte.softwaretechnology.stockprices.data.model.Meta;
-import elte.softwaretechnology.stockprices.parsers.Parser;
+import elte.softwaretechnology.stockprices.parsers.MessageParser;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,7 +16,7 @@ import java.util.List;
 
 import static java.util.Locale.ENGLISH;
 
-public class NewYorkTimesDataParser implements Parser {
+public class NewYorkTimesDataMessageParser implements MessageParser {
     private DateTimeFormatter dateFormatOption1 = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'", ENGLISH);
     private DateTimeFormatter dateFormatOption2 = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssZ", ENGLISH);
 

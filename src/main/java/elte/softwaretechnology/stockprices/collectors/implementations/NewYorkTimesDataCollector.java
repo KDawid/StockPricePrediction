@@ -1,9 +1,9 @@
 package elte.softwaretechnology.stockprices.collectors.implementations;
 
 import elte.softwaretechnology.stockprices.collectors.DataCollector;
-import elte.softwaretechnology.stockprices.parsers.Parser;
-import elte.softwaretechnology.stockprices.parsers.implementations.NewYorkTimesDataParser;
 import elte.softwaretechnology.stockprices.data.model.QueryParameter;
+import elte.softwaretechnology.stockprices.parsers.MessageParser;
+import elte.softwaretechnology.stockprices.parsers.implementations.NewYorkTimesDataMessageParser;
 import org.apache.commons.httpclient.NameValuePair;
 
 import java.util.Arrays;
@@ -65,7 +65,7 @@ public class NewYorkTimesDataCollector extends DataCollector {
 	}
 
 	@Override
-	protected Parser getParser() {
-		return new NewYorkTimesDataParser();
+	protected MessageParser getParser() {
+		return new NewYorkTimesDataMessageParser();
 	}
 }

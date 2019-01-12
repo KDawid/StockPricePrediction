@@ -5,7 +5,7 @@ import elte.softwaretechnology.stockprices.data.model.Meta;
 
 import java.util.List;
 
-public interface Parser {
+public interface MessageParser {
 	public List<Article> parseResponeData(String message);
 
 	public Meta parseResponeMeta(String message);

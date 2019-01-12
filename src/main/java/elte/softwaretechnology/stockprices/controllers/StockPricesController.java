@@ -2,32 +2,35 @@ package elte.softwaretechnology.stockprices.controllers;
 
 import elte.softwaretechnology.stockprices.collectors.DataCollector;
 import elte.softwaretechnology.stockprices.collectors.DataCollectorFactory;
-import elte.softwaretechnology.stockprices.data.model.Article;
-import elte.softwaretechnology.stockprices.data.model.KeyWord;
-import elte.softwaretechnology.stockprices.data.model.Meta;
+import elte.softwaretechnology.stockprices.data.model.QueryParameter;
 import elte.softwaretechnology.stockprices.data.model.QueryResult;
 import elte.softwaretechnology.stockprices.data.service.QueryResultService;
-import elte.softwaretechnology.stockprices.data.model.QueryParameter;
+import elte.softwaretechnology.stockprices.data.service.StockDataService;
+import elte.softwaretechnology.stockprices.parsers.implementations.DailyStockDataParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Collections;
+import java.util.Scanner;
 
 import static elte.softwaretechnology.stockprices.collectors.DataCollectorType.NewYorkTimes;
 
 @RestController
 @Transactional
-public class StockPricesController {
+public class StockPricesController { //todo another controller for different purposes
 	@Autowired
 	private DataCollectorFactory dataCollectorFactory;
 
 	@Autowired
 	private QueryResultService queryResultService;
+
+	@Autowired
+	private StockDataService stockDataService;
 
 	@GetMapping(path = "/")
 	public String getHome() {
@@ -38,6 +41,24 @@ public class StockPricesController {
 	@GetMapping(path = "/index")
 	public String getIndex() {
 		return "index";
+	}
+
+	@GetMapping(path = "/stockdata")
+	public String getStockData() {
+		DailyStockDataParser dailyStockDataParser = new DailyStockDataParser();
+		Scanner scanner = null;
+		try {
+			scanner = new Scanner(new File("src/main/resources/AAPL.csv"));
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		scanner.nextLine(); //first row is header
+		while (scanner.hasNext()) {
+			stockDataService.save(dailyStockDataParser.parseStockData(scanner.nextLine()));
+		}
+
+		return "index"; //todo create a proper page
 	}
 
 	@GetMapping(path = "/newyorktimes")
