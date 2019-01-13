@@ -6,7 +6,6 @@ import elte.softwaretechnology.stockprices.parsers.StockDataParser;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-//todo write proper tests
 public class DailyStockDataParser implements StockDataParser {
 
 	@Override
