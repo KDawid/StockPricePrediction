@@ -1,20 +1,5 @@
 package elte.softwaretechnology.stockprices.controllers;
 
-import static elte.softwaretechnology.stockprices.collectors.DataCollectorType.NewYorkTimes;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.Scanner;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import elte.softwaretechnology.stockprices.collectors.DataCollector;
 import elte.softwaretechnology.stockprices.collectors.DataCollectorFactory;
 import elte.softwaretechnology.stockprices.data.model.QueryParameter;
@@ -23,15 +8,16 @@ import elte.softwaretechnology.stockprices.data.service.QueryResultService;
 import elte.softwaretechnology.stockprices.data.service.StockDataService;
 import elte.softwaretechnology.stockprices.parsers.implementations.DailyStockDataParser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static elte.softwaretechnology.stockprices.collectors.DataCollectorType.NewYorkTimes;
