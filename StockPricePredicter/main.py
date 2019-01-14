@@ -89,5 +89,5 @@ for regression in regressions:
                 false_negative += 1
             else:
                 true_negative += 1
-    print("TP: %i\t FP: %i\tFN: %i\tTN: %i" % (true_positive, false_positive, false_negative, true_negative))
+    print("\tTP: %i\tFP: %i\n\tFN: %i\tTN: %i" % (true_positive, false_positive, false_negative, true_negative))
     print("\n")
