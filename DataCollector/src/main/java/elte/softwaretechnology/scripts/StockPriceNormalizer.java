@@ -25,6 +25,7 @@ public class StockPriceNormalizer {
 	private DailyStockDataParser dailyStockDataParser = new DailyStockDataParser();
 	private Scanner scanner = null;
 	private List<StockData> stockData = new ArrayList<StockData>();
+	private List<Double> openDifference = new ArrayList<Double>();
 
 	public static void main(String[] args) throws IOException {
 		System.out.println("Starting normalization");
@@ -48,6 +49,10 @@ public class StockPriceNormalizer {
 	}
 
 	private void transformData() {
+		openDifference.add(0.0);
+		for (int i = 1; i < stockData.size(); i++) {
+			openDifference.add(stockData.get(i).getOpen() - stockData.get(i - 1).getClose());
+		}
 		for (StockData data : stockData) {
 			double open = data.getOpen();
 			data.setOpen(0.0);
@@ -58,18 +63,22 @@ public class StockPriceNormalizer {
 	}
 
 	private void saveNormalizedData() throws IOException {
+		if (stockData.size() != openDifference.size()) {
+			throw new IOException("List sizes should be equal.");
+		}
 		try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(STOCK_PRICES_RESUL_FILE_PATH));
 
 				CSVPrinter csvPrinter = new CSVPrinter(writer,
-						CSVFormat.DEFAULT.withHeader("Date", "Open", "High", "Low", "Close"))) {
-			for (StockData data : stockData) {
-				String date = data.getDate().format(DateTimeFormatter.ofPattern("M/d/yyyy"));
-				String open = String.format("%.6f", data.getOpen());
-				String max = String.format("%.6f", data.getMax());
-				String min = String.format("%.6f", data.getMin());
-				String close = String.format("%.6f", data.getClose());
+						CSVFormat.DEFAULT.withHeader("Date", "Open", "High", "Low", "Close", "Open_diff"))) {
+			for (int i = 0; i < stockData.size(); i++) {
+				String date = stockData.get(i).getDate().format(DateTimeFormatter.ofPattern("M/d/yyyy"));
+				String open = String.format("%.6f", stockData.get(i).getOpen());
+				String max = String.format("%.6f", stockData.get(i).getMax());
+				String min = String.format("%.6f", stockData.get(i).getMin());
+				String close = String.format("%.6f", stockData.get(i).getClose());
+				String openDiff = String.format("%.6f", openDifference.get(i));
 
-				csvPrinter.printRecord(Arrays.asList(date, open, max, min, close));
+				csvPrinter.printRecord(Arrays.asList(date, open, max, min, close, openDiff));
 			}
 			csvPrinter.flush();
 		}
