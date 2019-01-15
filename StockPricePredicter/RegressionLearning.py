@@ -10,10 +10,10 @@ from sklearn.tree import DecisionTreeRegressor
 class RegressionLearning:
 
     def __init__(self, training_set_X, training_set_y, validation_set_X, validation_set_y):
-        self.models = regressions = [SVR(gamma='scale'), LinearRegression(), DecisionTreeRegressor(),
-                                     MLPRegressor(max_iter=1000), KNeighborsRegressor(), Ridge(),
-                                     HuberRegressor(), KernelRidge(), LinearSVR(max_iter=5000, tol=0.0001),
-                                     SGDRegressor(max_iter=1000), GaussianProcessRegressor()]
+        self.models = [SVR(gamma='scale'), LinearRegression(), DecisionTreeRegressor(),
+                       MLPRegressor(max_iter=1000), KNeighborsRegressor(), Ridge(),
+                       HuberRegressor(), KernelRidge(), LinearSVR(max_iter=5000, tol=0.0001),
+                       SGDRegressor(max_iter=1000), GaussianProcessRegressor()]
         self.training_set_X = training_set_X
         self.training_set_y = training_set_y
         self.validation_set_X = validation_set_X
