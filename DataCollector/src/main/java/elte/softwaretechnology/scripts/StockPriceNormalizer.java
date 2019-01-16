@@ -55,7 +55,6 @@ public class StockPriceNormalizer {
 		}
 		for (StockData data : stockData) {
 			double open = data.getOpen();
-			data.setOpen(1.0);
 			data.setClose(data.getClose() / open);
 			data.setMax(data.getMax() / open);
 			data.setMin(data.getMin() / open);
