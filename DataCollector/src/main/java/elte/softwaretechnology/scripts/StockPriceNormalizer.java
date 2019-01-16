@@ -49,16 +49,16 @@ public class StockPriceNormalizer {
 	}
 
 	private void transformData() {
-		openDifference.add(0.0);
+		openDifference.add(1.0);
 		for (int i = 1; i < stockData.size(); i++) {
-			openDifference.add(stockData.get(i).getOpen() - stockData.get(i - 1).getClose());
+			openDifference.add(stockData.get(i).getOpen() / stockData.get(i - 1).getClose());
 		}
 		for (StockData data : stockData) {
 			double open = data.getOpen();
-			data.setOpen(0.0);
-			data.setClose(data.getClose() - open);
-			data.setMax(data.getMax() - open);
-			data.setMin(data.getMin() - open);
+			data.setOpen(1.0);
+			data.setClose(data.getClose() / open);
+			data.setMax(data.getMax() / open);
+			data.setMin(data.getMin() / open);
 		}
 	}
 
