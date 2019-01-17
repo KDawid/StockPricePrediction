@@ -1,4 +1,5 @@
 import numpy as np
+from sklearn.ensemble import AdaBoostRegressor
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.kernel_ridge import KernelRidge
 from sklearn.linear_model import HuberRegressor, LinearRegression, Ridge, SGDRegressor
@@ -13,27 +14,30 @@ class RegressionLearning:
         self.models = [SVR(gamma='scale'), LinearRegression(), DecisionTreeRegressor(),
                        MLPRegressor(max_iter=1000), KNeighborsRegressor(), Ridge(),
                        HuberRegressor(), KernelRidge(), LinearSVR(max_iter=5000, tol=0.0001),
-                       SGDRegressor(max_iter=1000), GaussianProcessRegressor()]
+                       SGDRegressor(max_iter=1000), GaussianProcessRegressor(), AdaBoostRegressor()]
         self.training_set_X = training_set_X
         self.training_set_y = training_set_y
         self.validation_set_X = validation_set_X
         self.validation_set_y = validation_set_y
 
-    def run(self, daily_price=1000):
+    def run(self, daily_price=100):
+        self.printStartPattern()
         self.calculateBaseline(daily_price)
         for model in self.models:
             self.runRegression(model, daily_price)
+        self.printEndPattern()
 
-    def calculateBaseline(self, daily_price=1000):
+    def calculateBaseline(self, daily_price=100):
         print("Buy every day %i$, and sell before close" % daily_price)
         sum = []
         for i in self.validation_set_y:
             sum.append(i*daily_price)
-        print("Baseline (daily average): %f$" % np.mean(sum))
+        print("Baseline: %f$" % np.sum(sum))
 
     def runRegression(self, model, daily_price):
         print("------------------------------------------------------------------------------------")
-        print("Using model for %s" % model)
+        model_str = str(model).split("(")[0]
+        print("Using model for %s" % model_str)
 
         model.fit(self.training_set_X, self.training_set_y)
 
@@ -43,7 +47,9 @@ class RegressionLearning:
         for i in range(len(self.validation_set_y)):
             if stock_price_predictions[i] > 1.0:
                 sum.append(self.validation_set_y[i]*daily_price)
-        print("Predicted (daily average): %f$" % np.mean(sum))
+            else:
+                sum.append(daily_price)
+        print("Predicted: %f$" % np.sum(sum))
 
         self.calculateConfusions(self.validation_set_y, stock_price_predictions)
 
@@ -67,3 +73,13 @@ class RegressionLearning:
                 else:
                     true_negative += 1
         print("\tTP: %i\tFP: %i\n\tFN: %i\tTN: %i" % (true_positive, false_positive, false_negative, true_negative))
+
+    def printStartPattern(self):
+        print("\n\t#######################")
+        print("\t# STARTING REGRESSION #")
+        print("\t#######################\n")
+
+    def printEndPattern(self):
+        print("\n\t###########################")
+        print("\t# REGRESSION HAS FINISHED #")
+        print("\t###########################\n")

@@ -6,9 +6,10 @@ class DataSetCreator:
         self.FILE_PATH = csv_file_path
         self.VALIDATION_SET_SPLIT = validation_set_split
         self.USED_DAYS = used_days
+        self.DATA = pd.read_csv(self.FILE_PATH)
 
     def getDataSets(self, type):
-        data = pd.read_csv(self.FILE_PATH)
+        data = self.DATA
 
         keys = list(data.keys().get_values())
         data = data.values
@@ -31,11 +32,7 @@ class DataSetCreator:
         learning_data_X = []
         learning_data_y = []
         for i in range(used_days, len(data_set)):
-            element = []
-            for day in range(1, used_days):
-                for j in [keys.index(key) for key in keys if key not in ["Date", "Open"]]:
-                    element.append(data_set[i - day][j])
-            learning_data_X.append(element)
+            self.addLearningElements(i, learning_data_X, data_set, used_days, keys)
             learning_data_y.append(data_set[i][keys.index("Close")])
         return learning_data_X, learning_data_y
 
@@ -44,15 +41,19 @@ class DataSetCreator:
         learning_data_X = []
         learning_data_y = []
         for i in range(used_days, len(data_set)):
-            element = []
-            for day in range(1, used_days):
-                for j in [keys.index(key) for key in keys if key not in ["Date", "Open"]]:
-                    element.append(data_set[i - day][j])
-            learning_data_X.append(element)
+            self.addLearningElements(i, learning_data_X, data_set, used_days, keys)
             learning_data_y.append(data_set[i][keys.index("High")] >= goal)
         return learning_data_X, learning_data_y
 
+    def addLearningElements(self, i, learning_data_X, data_set, used_days, keys):
+        element = []
+        for day in range(1, used_days):
+            for j in [keys.index(key) for key in keys if key not in ["Date", "Open"]]:
+                element.append(data_set[i - day][j])
+        learning_data_X.append(element)
+
+    def getValues(self, column):
+        return self.DATA[column].values[-self.VALIDATION_SET_SPLIT:]
 
     def getMedianOfMaxes(self):
-        data = pd.read_csv(self.FILE_PATH)
-        return np.mean(data["High"][:-self.VALIDATION_SET_SPLIT].values)
+        return np.mean(self.DATA["High"][:-self.VALIDATION_SET_SPLIT].values)

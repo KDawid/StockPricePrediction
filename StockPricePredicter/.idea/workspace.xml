@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b82a155-e74d-495b-b880-d7544ee16c47" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../DataCollector/src/main/java/elte/softwaretechnology/stockprices/controllers/StockPricesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DataCollector/src/main/java/elte/softwaretechnology/stockprices/controllers/StockPricesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AAPL_normalized.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AAPL_normalized.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassificationLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassificationLearning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataSetCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataSetCreator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RegressionLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/RegressionLearning.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -22,8 +22,8 @@
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -39,13 +39,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
-          <entry key="py" value="2496" />
+          <entry key="py" value="4144" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="2496" />
+          <entry key="Python" value="4144" />
         </counts>
       </usages-collector>
     </session>
@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -65,22 +65,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RegressionLearning.py">
+        <entry file="file://$PROJECT_DIR$/ClassificationLearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+            <state relative-caret-position="-756">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClassificationLearning.py">
+        <entry file="file://$PROJECT_DIR$/RegressionLearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+            <state relative-caret-position="272">
+              <caret line="16" column="98" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -91,8 +91,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataSetCreator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="918">
+              <caret line="55" column="68" selection-start-line="55" selection-start-column="68" selection-end-line="55" selection-end-column="68" />
+              <folding>
+                <marker date="1547757843365" expanded="true" signature="2300:2375" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,6 +109,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>raise</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -114,18 +122,18 @@
       <list>
         <option value="$PROJECT_DIR$/dataSetCreator.py" />
         <option value="$PROJECT_DIR$/RegressionTester.py" />
-        <option value="$PROJECT_DIR$/ClassificationLearning.py" />
         <option value="$PROJECT_DIR$/DataSetCreator.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/RegressionLearning.py" />
+        <option value="$PROJECT_DIR$/ClassificationLearning.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="1653" />
+    <option name="y" value="-24" />
+    <option name="width" value="1241" />
+    <option name="height" value="678" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -133,7 +141,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,6 +152,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -230,15 +238,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20604026" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16577825" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30070922" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2559653" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -274,37 +282,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataSetCreator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="918">
+          <caret line="55" column="68" selection-start-line="55" selection-start-column="68" selection-end-line="55" selection-end-column="68" />
+          <folding>
+            <marker date="1547757843365" expanded="true" signature="2300:2375" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClassificationLearning.py">
+    <entry file="file://$PROJECT_DIR$/RegressionLearning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        <state relative-caret-position="272">
+          <caret line="16" column="98" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RegressionLearning.py">
+    <entry file="file://$PROJECT_DIR$/ClassificationLearning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        <state relative-caret-position="-756">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
