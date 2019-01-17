@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b82a155-e74d-495b-b880-d7544ee16c47" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/DataSetCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataSetCreator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DataCollector/src/main/java/elte/softwaretechnology/stockprices/controllers/StockPricesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DataCollector/src/main/java/elte/softwaretechnology/stockprices/controllers/StockPricesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAPL_normalized.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AAPL_normalized.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RegressionLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/RegressionLearning.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -18,9 +20,10 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -36,13 +39,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
-          <entry key="py" value="2147" />
+          <entry key="py" value="2496" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="2147" />
+          <entry key="Python" value="2496" />
         </counts>
       </usages-collector>
     </session>
@@ -52,10 +55,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="112" selection-start-line="9" selection-start-column="112" selection-end-line="9" selection-end-column="112" />
+            <state relative-caret-position="221">
+              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RegressionLearning.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,42 +79,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ClassificationLearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+            <state relative-caret-position="493">
+              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1547580538547" expanded="true" signature="83:1415" ph="..." />
-                <marker date="1547580538547" expanded="true" signature="1387:1396" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RegressionLearning.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="50" column="77" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="50" selection-end-column="77" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1547580168772" expanded="true" signature="423:424" ph="..." />
-                <marker date="1547580168772" expanded="true" signature="516:525" ph="..." />
-                <marker date="1547580168772" expanded="true" signature="1209:1343" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataSetCreator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-              <folding>
-                <element signature="e#1#19#0" expanded="true" />
-                <marker date="1547580631756" expanded="true" signature="61:66" ph="..." />
-                <marker date="1547580631756" expanded="true" signature="1773:2273" ph="..." />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -121,18 +114,18 @@
       <list>
         <option value="$PROJECT_DIR$/dataSetCreator.py" />
         <option value="$PROJECT_DIR$/RegressionTester.py" />
-        <option value="$PROJECT_DIR$/RegressionLearning.py" />
         <option value="$PROJECT_DIR$/ClassificationLearning.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/DataSetCreator.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/RegressionLearning.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1691" />
-    <option name="y" value="-21" />
-    <option name="width" value="1552" />
-    <option name="height" value="880" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -237,15 +230,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20309168" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20604026" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.51626897" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30070922" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -265,19 +258,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RegressionLearning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="50" column="77" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="50" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1547580168772" expanded="true" signature="423:424" ph="..." />
-            <marker date="1547580168772" expanded="true" signature="516:525" ph="..." />
-            <marker date="1547580168772" expanded="true" signature="1209:1343" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/core/fromnumeric.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -292,36 +272,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClassificationLearning.py">
+    <entry file="file://$PROJECT_DIR$/DataSetCreator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1547580538547" expanded="true" signature="83:1415" ph="..." />
-            <marker date="1547580538547" expanded="true" signature="1387:1396" ph="..." />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="112" selection-start-line="9" selection-start-column="112" selection-end-line="9" selection-end-column="112" />
+        <state relative-caret-position="221">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataSetCreator.py">
+    <entry file="file://$PROJECT_DIR$/ClassificationLearning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="493">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
           <folding>
-            <element signature="e#1#19#0" expanded="true" />
-            <marker date="1547580631756" expanded="true" signature="61:66" ph="..." />
-            <marker date="1547580631756" expanded="true" signature="1773:2273" ph="..." />
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegressionLearning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

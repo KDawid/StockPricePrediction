@@ -19,18 +19,19 @@ class RegressionLearning:
         self.validation_set_X = validation_set_X
         self.validation_set_y = validation_set_y
 
-    def run(self):
-        self.calculateBaseline()
+    def run(self, daily_price=1000):
+        self.calculateBaseline(daily_price)
         for model in self.models:
-            self.runRegression(model)
+            self.runRegression(model, daily_price)
 
-    def calculateBaseline(self):
+    def calculateBaseline(self, daily_price=1000):
+        print("Buy every day %i$, and sell before close" % daily_price)
         sum = []
         for i in self.validation_set_y:
-            sum.append(i)
-        print("Baseline: %f" % np.mean(sum))
+            sum.append(i*daily_price)
+        print("Baseline (daily average): %f$" % np.mean(sum))
 
-    def runRegression(self, model):
+    def runRegression(self, model, daily_price):
         print("------------------------------------------------------------------------------------")
         print("Using model for %s" % model)
 
@@ -40,9 +41,9 @@ class RegressionLearning:
 
         sum = []
         for i in range(len(self.validation_set_y)):
-            if stock_price_predictions[i] > 0.0:
-                sum.append(self.validation_set_y[i])
-        print("Predicted: %f" % np.mean(sum))
+            if stock_price_predictions[i] > 1.0:
+                sum.append(self.validation_set_y[i]*daily_price)
+        print("Predicted (daily average): %f$" % np.mean(sum))
 
         self.calculateConfusions(self.validation_set_y, stock_price_predictions)
 
@@ -55,13 +56,13 @@ class RegressionLearning:
         false_negative = 0
 
         for i in range(len(validation_set_y)):
-            if stock_price_predictions[i] > 0.0:
-                if validation_set_y[i] > 0.0:
+            if stock_price_predictions[i] > 1.0:
+                if validation_set_y[i] > 1.0:
                     true_positive += 1
                 else:
                     false_positive += 1
             else:
-                if validation_set_y[i] > 0.0:
+                if validation_set_y[i] > 1.0:
                     false_negative += 1
                 else:
                     true_negative += 1
