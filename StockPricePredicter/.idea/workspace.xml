@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b82a155-e74d-495b-b880-d7544ee16c47" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CloseClassificationLearning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Article.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SqlConnector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassificationLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/HighClassificationLearning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassificationLearning.py.orig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataSetCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataSetCreator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,24 +28,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="10" />
+          <entry key="ini" value="1" />
+          <entry key="py" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="10" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="38" />
-          <entry key="py" value="4488" />
+          <entry key="ini" value="22" />
+          <entry key="py" value="5895" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="38" />
-          <entry key="Python" value="4488" />
+          <entry key="PLAIN_TEXT" value="60" />
+          <entry key="Python" value="5895" />
         </counts>
       </usages-collector>
     </session>
@@ -57,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="136">
+              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -69,10 +70,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SqlConnector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="298">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
-                <marker date="1547907628683" expanded="true" signature="19:20" ph="..." />
+                <element signature="e#0#27#0" expanded="true" />
+                <marker date="1547911652626" expanded="true" signature="222:247" ph="..." />
+                <marker date="1547911652626" expanded="true" signature="482:483" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Article.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+              <folding>
+                <marker date="1547911363898" expanded="true" signature="14:19" ph="..." />
               </folding>
             </state>
           </provider>
@@ -118,7 +133,7 @@
         <entry file="file://$PROJECT_DIR$/DataSetCreator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1020">
-              <caret line="61" column="52" lean-forward="true" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
+              <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
               <folding>
                 <marker date="1547907020073" expanded="true" signature="2855:2930" ph="..." />
               </folding>
@@ -153,12 +168,14 @@
         <option value="$PROJECT_DIR$/DataSetCreator.py" />
         <option value="$PROJECT_DIR$/HighClassificationLearning.py" />
         <option value="$PROJECT_DIR$/CloseClassificationLearning.py" />
+        <option value="$PROJECT_DIR$/database.ini" />
+        <option value="$PROJECT_DIR$/Article.py" />
         <option value="$PROJECT_DIR$/SqlConnector.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1653" />
     <option name="y" value="-24" />
     <option name="width" value="1241" />
@@ -199,7 +216,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.SqlConnector">
     <configuration name="ClassificationLearning" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="StockPricePredicter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -242,6 +259,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="SqlConnector" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="StockPricePredicter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SqlConnector.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="StockPricePredicter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -267,9 +305,11 @@
       <item itemvalue="Python.main" />
       <item itemvalue="Python.ClassificationLearning" />
       <item itemvalue="Python.CloseClassificationLearning" />
+      <item itemvalue="Python.SqlConnector" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.SqlConnector" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.CloseClassificationLearning" />
         <item itemvalue="Python.ClassificationLearning" />
@@ -332,12 +372,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RegressionLearning.py">
+    <entry file="file://$PROJECT_DIR$/CloseClassificationLearning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-705">
-          <caret line="16" column="98" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
+        <state relative-caret-position="136">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -352,12 +392,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CloseClassificationLearning.py">
+    <entry file="file://$PROJECT_DIR$/RegressionLearning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+        <state relative-caret-position="-705">
+          <caret line="16" column="98" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -365,27 +405,46 @@
     <entry file="file://$PROJECT_DIR$/DataSetCreator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
-          <caret line="61" column="52" lean-forward="true" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
+          <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
           <folding>
             <marker date="1547907020073" expanded="true" signature="2855:2930" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Article.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <marker date="1547911363898" expanded="true" signature="14:19" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SqlConnector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="298">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
-            <marker date="1547907628683" expanded="true" signature="19:20" ph="..." />
+            <element signature="e#0#27#0" expanded="true" />
+            <marker date="1547911652626" expanded="true" signature="222:247" ph="..." />
+            <marker date="1547911652626" expanded="true" signature="482:483" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="136">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
