@@ -39,7 +39,7 @@ class DataSetCreator:
         return learning_data_X, learning_data_y
 
     def __createHighClassificationLearningData(self, data_set, used_days, keys):
-        goal = self.__getMedianOfMaxes()
+        goal = self.getMedianOfMaxes()
         learning_data_X = []
         learning_data_y = []
         for i in range(used_days, len(data_set)):
@@ -62,8 +62,8 @@ class DataSetCreator:
                 element.append(data_set[i - day][j])
         learning_data_X.append(element)
 
-    def __getValidationValues(self, column):
+    def getValidationValues(self, column):
         return self.DATA[column].values[-self.VALIDATION_SET_SPLIT:]
 
-    def __getMedianOfMaxes(self):
+    def getMedianOfMaxes(self):
         return np.mean(self.DATA["High"][:-self.VALIDATION_SET_SPLIT].values)

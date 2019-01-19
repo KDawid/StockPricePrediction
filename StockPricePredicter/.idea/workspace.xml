@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b82a155-e74d-495b-b880-d7544ee16c47" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/SentimentAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentAnalyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataSetCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataSetCreator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+            <state relative-caret-position="133">
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -64,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SentimentAnalyzer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="298">
@@ -139,13 +139,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataSetCreator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state relative-caret-position="-178">
+              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
               <folding>
-                <marker date="1547913470027" expanded="true" signature="2879:2954" ph="..." />
+                <marker date="1547914000148" expanded="true" signature="2877:2952" ph="..." />
               </folding>
             </state>
           </provider>
@@ -181,8 +181,8 @@
         <option value="$PROJECT_DIR$/CloseClassificationLearning.py" />
         <option value="$PROJECT_DIR$/HighClassificationLearning.py" />
         <option value="$PROJECT_DIR$/RegressionLearning.py" />
-        <option value="$PROJECT_DIR$/DataSetCreator.py" />
         <option value="$PROJECT_DIR$/SentimentAnalyzer.py" />
+        <option value="$PROJECT_DIR$/DataSetCreator.py" />
       </list>
     </option>
   </component>
@@ -227,7 +227,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.SentimentAnalyzer">
+  <component name="RunManager" selected="Python.main">
     <configuration name="ClassificationLearning" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="StockPricePredicter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -342,9 +342,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.SentimentAnalyzer" />
         <item itemvalue="Python.SqlConnector" />
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.CloseClassificationLearning" />
         <item itemvalue="Python.ClassificationLearning" />
       </list>
@@ -371,8 +371,8 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5140998" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5140998" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -419,16 +419,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Article.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -469,16 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataSetCreator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding>
-            <marker date="1547913470027" expanded="true" signature="2879:2954" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SentimentAnalyzer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -486,6 +466,26 @@
           <folding>
             <element signature="e#0#37#0" expanded="true" />
             <marker date="1547913897005" expanded="true" signature="189:673" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataSetCreator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-178">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+          <folding>
+            <marker date="1547914000148" expanded="true" signature="2877:2952" ph="..." />
           </folding>
         </state>
       </provider>
