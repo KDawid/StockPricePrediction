@@ -9,7 +9,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.svm import LinearSVC
 from sklearn.tree import DecisionTreeClassifier
 
-class ClassificationLearning:
+class CloseClassificationLearning:
     def __init__(self, training_set_X, training_set_y, validation_set_X, validation_set_y, goal):
         self.models = [LinearSVC(), SGDClassifier(), KNeighborsClassifier(), RadiusNeighborsClassifier(),
                        DecisionTreeClassifier(), GaussianProcessClassifier(),
@@ -19,11 +19,9 @@ class ClassificationLearning:
         self.training_set_y = training_set_y
         self.validation_set_X = validation_set_X
         self.validation_set_y = validation_set_y
-        self.goal = goal
 
     def run(self, daily_price=1000, close_values=None):
         self.printStartPattern()
-        print("Goal value: %f" % self.goal)
         self.calculateBaseline(daily_price, close_values)
         for model in self.models:
             self.runClassification(model, daily_price, close_values)
@@ -32,10 +30,7 @@ class ClassificationLearning:
     def calculateBaseline(self, daily_price=1000, close_values=None):
         sum = []
         for i in range(len(self.validation_set_y)):
-            if self.validation_set_y[i]:
-                sum.append(daily_price*self.goal)
-            else:
-                sum.append(daily_price * close_values[i])
+            sum.append(daily_price * close_values[i])
         print("Baseline: %f$" % np.sum(sum))
 
     def runClassification(self, model, daily_price, close_values):
@@ -51,9 +46,9 @@ class ClassificationLearning:
         for i in range(len(stock_price_predictions)):
             if stock_price_predictions[i]:
                 if self.validation_set_y[i]:
-                    sum.append(daily_price*self.goal)
+                    sum.append(daily_price*close_values[i])
                 else:
-                    sum.append(daily_price * close_values[i])
+                    sum.append(daily_price)
             else:
                 sum.append(daily_price)
         print("Predicted: %f" % np.sum(sum))
@@ -81,11 +76,11 @@ class ClassificationLearning:
         print("\tTP: %i\tFP: %i\n\tFN: %i\tTN: %i" % (true_positive, false_positive, false_negative, true_negative))
 
     def printStartPattern(self):
-        print("\n\t###########################")
-        print("\t# STARTING CLASSIFICATION #")
-        print("\t###########################\n")
+        print("\n\t###################################")
+        print("\t# STARTING 'CLOSE' CLASSIFICATION #")
+        print("\t###################################\n")
 
     def printEndPattern(self):
-        print("\n\t###############################")
-        print("\t# CLASSIFICATION HAS FINISHED #")
-        print("\t###############################\n")
+        print("\n\t#######################################")
+        print("\t# 'CLOSE' CLASSIFICATION HAS FINISHED #")
+        print("\t#######################################\n")

@@ -18,8 +18,10 @@ class DataSetCreator:
 
         if type == 'regr':
             data_X, data_y = self.createRegressionLearningData(data, self.USED_DAYS, keys)
-        elif type == 'class':
-            data_X, data_y = self.createClassificationLearningData(data, self.USED_DAYS, keys)
+        elif type == 'high_class':
+            data_X, data_y = self.createHighClassificationLearningData(data, self.USED_DAYS, keys)
+        elif type == 'close_class':
+            data_X, data_y = self.createCloseClassificationLearningData(data, self.USED_DAYS, keys)
         else:
             raise ValueError("type should be 'regr' or 'class'")
 
@@ -36,13 +38,21 @@ class DataSetCreator:
             learning_data_y.append(data_set[i][keys.index("Close")])
         return learning_data_X, learning_data_y
 
-    def createClassificationLearningData(self, data_set, used_days, keys):
+    def createHighClassificationLearningData(self, data_set, used_days, keys):
         goal = self.getMedianOfMaxes()
         learning_data_X = []
         learning_data_y = []
         for i in range(used_days, len(data_set)):
             self.addLearningElements(i, learning_data_X, data_set, used_days, keys)
             learning_data_y.append(data_set[i][keys.index("High")] >= goal)
+        return learning_data_X, learning_data_y
+
+    def createCloseClassificationLearningData(self, data_set, used_days, keys):
+        learning_data_X = []
+        learning_data_y = []
+        for i in range(used_days, len(data_set)):
+            self.addLearningElements(i, learning_data_X, data_set, used_days, keys)
+            learning_data_y.append(data_set[i][keys.index("Close")] > 1.0)
         return learning_data_X, learning_data_y
 
     def addLearningElements(self, i, learning_data_X, data_set, used_days, keys):
@@ -52,7 +62,7 @@ class DataSetCreator:
                 element.append(data_set[i - day][j])
         learning_data_X.append(element)
 
-    def getValues(self, column):
+    def getValidationValues(self, column):
         return self.DATA[column].values[-self.VALIDATION_SET_SPLIT:]
 
     def getMedianOfMaxes(self):
