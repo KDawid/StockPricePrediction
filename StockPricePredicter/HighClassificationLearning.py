@@ -22,14 +22,14 @@ class HighClassificationLearning:
         self.goal = goal
 
     def run(self, daily_price=1000, close_values=None):
-        self.printStartPattern()
+        self.__printStartPattern()
         print("Goal value: %f" % self.goal)
-        self.calculateBaseline(daily_price, close_values)
+        self.__calculateBaseline(daily_price, close_values)
         for model in self.models:
-            self.runClassification(model, daily_price, close_values)
-        self.printEndPattern()
+            self.__runClassification(model, daily_price, close_values)
+        self.__printEndPattern()
 
-    def calculateBaseline(self, daily_price=1000, close_values=None):
+    def __calculateBaseline(self, daily_price=1000, close_values=None):
         sum = []
         for i in range(len(self.validation_set_y)):
             if self.validation_set_y[i]:
@@ -38,7 +38,7 @@ class HighClassificationLearning:
                 sum.append(daily_price * close_values[i])
         print("Baseline: %f$" % np.sum(sum)) # If I buy every day
 
-    def runClassification(self, model, daily_price, close_values):
+    def __runClassification(self, model, daily_price, close_values):
         print("------------------------------------------------------------------------------------")
         model_str = str(model).split("(")[0]
         print("Using model for %s" % model_str)
@@ -58,10 +58,10 @@ class HighClassificationLearning:
                 sum.append(daily_price)
         print("Predicted: %f" % np.sum(sum))
 
-        self.calculateConfusions(self.validation_set_y, stock_price_predictions)
+        self.__calculateConfusions(self.validation_set_y, stock_price_predictions)
         print("\n")
 
-    def calculateConfusions(self, validation_set_y, stock_price_predictions):
+    def __calculateConfusions(self, validation_set_y, stock_price_predictions):
         true_positive = 0
         false_positive = 0
         true_negative = 0
@@ -80,12 +80,12 @@ class HighClassificationLearning:
                     true_negative += 1
         print("\tTP: %i\tFP: %i\n\tFN: %i\tTN: %i" % (true_positive, false_positive, false_negative, true_negative))
 
-    def printStartPattern(self):
+    def __printStartPattern(self):
         print("\n\t##################################")
         print("\t# STARTING 'HIGH' CLASSIFICATION #")
         print("\t##################################\n")
 
-    def printEndPattern(self):
+    def __printEndPattern(self):
         print("\n\t######################################")
         print("\t# 'HIGH' CLASSIFICATION HAS FINISHED #")
         print("\t######################################\n")

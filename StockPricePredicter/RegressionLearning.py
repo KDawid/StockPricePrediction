@@ -21,20 +21,20 @@ class RegressionLearning:
         self.validation_set_y = validation_set_y
 
     def run(self, daily_price=100):
-        self.printStartPattern()
-        self.calculateBaseline(daily_price)
+        self.__printStartPattern()
+        self.__calculateBaseline(daily_price)
         for model in self.models:
-            self.runRegression(model, daily_price)
-        self.printEndPattern()
+            self.__runRegression(model, daily_price)
+        self.__printEndPattern()
 
-    def calculateBaseline(self, daily_price=100):
+    def __calculateBaseline(self, daily_price=100):
         print("Buy every day %i$, and sell before close" % daily_price)
         sum = []
         for i in self.validation_set_y:
             sum.append(i*daily_price)
         print("Baseline: %f$" % np.sum(sum))
 
-    def runRegression(self, model, daily_price):
+    def __runRegression(self, model, daily_price):
         print("------------------------------------------------------------------------------------")
         model_str = str(model).split("(")[0]
         print("Using model for %s" % model_str)
@@ -51,11 +51,11 @@ class RegressionLearning:
                 sum.append(daily_price)
         print("Predicted: %f$" % np.sum(sum))
 
-        self.calculateConfusions(self.validation_set_y, stock_price_predictions)
+        self.__calculateConfusions(self.validation_set_y, stock_price_predictions)
 
         print("\n")
 
-    def calculateConfusions(self, validation_set_y, stock_price_predictions):
+    def __calculateConfusions(self, validation_set_y, stock_price_predictions):
         true_positive = 0
         false_positive = 0
         true_negative = 0
@@ -74,12 +74,12 @@ class RegressionLearning:
                     true_negative += 1
         print("\tTP: %i\tFP: %i\n\tFN: %i\tTN: %i" % (true_positive, false_positive, false_negative, true_negative))
 
-    def printStartPattern(self):
+    def __printStartPattern(self):
         print("\n\t#######################")
         print("\t# STARTING REGRESSION #")
         print("\t#######################\n")
 
-    def printEndPattern(self):
+    def __printEndPattern(self):
         print("\n\t###########################")
         print("\t# REGRESSION HAS FINISHED #")
         print("\t###########################\n")
