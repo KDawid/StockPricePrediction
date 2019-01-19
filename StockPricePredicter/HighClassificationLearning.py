@@ -4,14 +4,14 @@ import numpy as np
 from sklearn.ensemble import AdaBoostClassifier, GradientBoostingClassifier, RandomForestClassifier
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.linear_model import SGDClassifier
-from sklearn.neighbors import KNeighborsClassifier, RadiusNeighborsClassifier
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.svm import LinearSVC
 from sklearn.tree import DecisionTreeClassifier
 
 class HighClassificationLearning:
     def __init__(self, training_set_X, training_set_y, validation_set_X, validation_set_y, goal):
-        self.models = [LinearSVC(), SGDClassifier(), KNeighborsClassifier(), RadiusNeighborsClassifier(),
+        self.models = [LinearSVC(), SGDClassifier(), KNeighborsClassifier(),
                        DecisionTreeClassifier(), GaussianProcessClassifier(),
                        GradientBoostingClassifier(n_estimators=100),
                        RandomForestClassifier(), MLPClassifier(), AdaBoostClassifier()]

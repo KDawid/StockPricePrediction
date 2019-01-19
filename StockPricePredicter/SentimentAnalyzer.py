@@ -12,7 +12,8 @@ class SentimentAnalyzer:
 
     def getTitlesSentiment(self, year, month, day):
         articles_data = self.sql.getArticlesOfOneDay(year, month, day)
-        return np.mean([self.__getSentiment(data.title) for data in articles_data])
+        result = np.mean([self.__getSentiment(data.title) for data in articles_data])
+        return 0.0 if np.isnan(result) else result
 
     def __clean(self, data):
         return ' '.join(re.sub(REGEXP, " ", data).split())

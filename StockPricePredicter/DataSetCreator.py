@@ -1,3 +1,4 @@
+from SentimentAnalyzer import SentimentAnalyzer
 import numpy as np
 import pandas as pd
 
@@ -7,6 +8,8 @@ class DataSetCreator:
         self.VALIDATION_SET_SPLIT = validation_set_split
         self.USED_DAYS = used_days
         self.DATA = pd.read_csv(self.FILE_PATH)
+        self.SENTIMENTS = dict()
+        self.sentiment_analyzer = SentimentAnalyzer()
 
     def getDataSets(self, type):
         data = self.DATA
@@ -60,6 +63,7 @@ class DataSetCreator:
         for day in range(1, used_days):
             for j in [keys.index(key) for key in keys if key not in ["Date", "Open"]]:
                 element.append(data_set[i - day][j])
+                element.append(self.__getSentimentData(data_set[i - day][keys.index("Date")]))
         learning_data_X.append(element)
 
     def getValidationValues(self, column):
@@ -67,3 +71,10 @@ class DataSetCreator:
 
     def getMedianOfMaxes(self):
         return np.mean(self.DATA["High"][:-self.VALIDATION_SET_SPLIT].values)
+
+    def __getSentimentData(self, date):
+        if date not in self.SENTIMENTS.keys():
+            int_date = [int(d) for d in date.split("/")]
+            self.SENTIMENTS[date] = self.sentiment_analyzer.getTitlesSentiment(int_date[2], int_date[0], int_date[1])
+            print("Add sentiments for day " + date + ":\t" + str(self.SENTIMENTS[date]))
+        return self.SENTIMENTS[date]
