@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b82a155-e74d-495b-b880-d7544ee16c47" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CloseClassificationLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/CloseClassificationLearning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataSetCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataSetCreator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HighClassificationLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/HighClassificationLearning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RegressionLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/RegressionLearning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SentimentAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentAnalyzer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,11 +67,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SentimentAnalyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="298">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
-                <marker date="1547913470015" expanded="true" signature="123:582" ph="..." />
+                <marker date="1547913897005" expanded="true" signature="189:673" ph="..." />
               </folding>
             </state>
           </provider>
@@ -409,13 +406,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database.ini" />
     <entry file="file://$PROJECT_DIR$/SqlConnector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -490,11 +481,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SentimentAnalyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="298">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-            <marker date="1547913470015" expanded="true" signature="123:582" ph="..." />
+            <marker date="1547913897005" expanded="true" signature="189:673" ph="..." />
           </folding>
         </state>
       </provider>

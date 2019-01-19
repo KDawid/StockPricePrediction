@@ -10,7 +10,8 @@ class SentimentAnalyzer:
     def __init__(self):
         self.sql = SqlConnector()
 
-    def getTitlesSentiment(self, articles_data):
+    def getTitlesSentiment(self, year, month, day):
+        articles_data = self.sql.getArticlesOfOneDay(year, month, day)
         return np.mean([self.__getSentiment(data.title) for data in articles_data])
 
     def __clean(self, data):
