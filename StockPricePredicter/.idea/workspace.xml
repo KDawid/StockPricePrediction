@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b82a155-e74d-495b-b880-d7544ee16c47" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CloseClassificationLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/CloseClassificationLearning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataSetCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataSetCreator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HighClassificationLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/HighClassificationLearning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SentimentAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentAnalyzer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="8b82a155-e74d-495b-b880-d7544ee16c47" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +12,7 @@
     <session id="342779531">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.3" value="1" />
@@ -379,7 +373,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37310195" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37310195" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
