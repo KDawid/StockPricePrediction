@@ -25,6 +25,7 @@ class HighClassificationLearning:
         self.__printStartPattern()
         print("Goal value: %f" % self.goal)
         self.__calculateBaseline(daily_price, close_values)
+        self.__calculateBestAndWorstScenario(daily_price, close_values)
         for model in self.models:
             self.__runClassification(model, daily_price, close_values)
         self.__printEndPattern()
@@ -37,6 +38,19 @@ class HighClassificationLearning:
             else:
                 sum.append(daily_price * close_values[i])
         print("Baseline: %f$" % np.sum(sum)) # If I buy every day
+
+    def __calculateBestAndWorstScenario(self, daily_price=1000, close_values=None):
+        best_sum = []
+        worst_sum = []
+        for i in range(len(self.validation_set_y)):
+            if self.validation_set_y[i]:
+                best_sum.append(daily_price * self.goal)
+                worst_sum.append(daily_price)
+            else:
+                worst_sum.append(daily_price * close_values[i])
+                best_sum.append(daily_price)
+        print("Theoretical maximum price: %f$" % np.sum(best_sum))
+        print("Theoretical minimum price: %f$" % np.sum(worst_sum))
 
     def __runClassification(self, model, daily_price, close_values):
         print("------------------------------------------------------------------------------------")
@@ -56,7 +70,7 @@ class HighClassificationLearning:
                     sum.append(daily_price * close_values[i])
             else:
                 sum.append(daily_price)
-        print("Predicted: %f" % np.sum(sum))
+        print("Predicted: %f$" % np.sum(sum))
 
         self.__calculateConfusions(self.validation_set_y, stock_price_predictions)
         print("\n")

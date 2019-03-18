@@ -10,7 +10,7 @@ from sklearn.svm import LinearSVC
 from sklearn.tree import DecisionTreeClassifier
 
 class CloseClassificationLearning:
-    def __init__(self, training_set_X, training_set_y, validation_set_X, validation_set_y, goal):
+    def __init__(self, training_set_X, training_set_y, validation_set_X, validation_set_y):
         self.models = [LinearSVC(), SGDClassifier(), KNeighborsClassifier(),
                        DecisionTreeClassifier(), GaussianProcessClassifier(),
                        GradientBoostingClassifier(n_estimators=100),
@@ -23,6 +23,7 @@ class CloseClassificationLearning:
     def run(self, daily_price=1000, close_values=None):
         self.__printStartPattern()
         self.__calculateBaseline(daily_price, close_values)
+        self.__calculateBestAndWorstScenario(daily_price, close_values)
         for model in self.models:
             self.__runClassification(model, daily_price, close_values)
         self.__printEndPattern()
@@ -32,6 +33,19 @@ class CloseClassificationLearning:
         for i in range(len(self.validation_set_y)):
             sum.append(daily_price * close_values[i])
         print("Baseline: %f$" % np.sum(sum))
+
+    def __calculateBestAndWorstScenario(self, daily_price=1000, close_values=None):
+        best_sum = []
+        worst_sum = []
+        for i in range(len(self.validation_set_y)):
+            if close_values[i] > 1.0:
+                best_sum.append(daily_price * close_values[i])
+                worst_sum.append(daily_price)
+            else:
+                best_sum.append(daily_price)
+                worst_sum.append(daily_price * close_values[i])
+        print("Theoretical maximum price: %f$" % np.sum(best_sum))
+        print("Theoretical minimum price: %f$" % np.sum(worst_sum))
 
     def __runClassification(self, model, daily_price, close_values):
         print("------------------------------------------------------------------------------------")
@@ -51,7 +65,7 @@ class CloseClassificationLearning:
                     sum.append(daily_price)
             else:
                 sum.append(daily_price)
-        print("Predicted: %f" % np.sum(sum))
+        print("Predicted: %f$" % np.sum(sum))
 
         self.__calculateConfusions(self.validation_set_y, stock_price_predictions)
         print("\n")

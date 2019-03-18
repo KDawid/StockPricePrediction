@@ -3,7 +3,7 @@ from DataSetCreator import DataSetCreator
 from HighClassificationLearning import HighClassificationLearning
 from RegressionLearning import RegressionLearning
 
-USED_DAYS = 10
+USED_DAYS = 5
 VALIDATION_SET_SPLIT = 500
 DAILY_PRICE = 100
 CSV_FILE_PATH = "AAPL_normalized.csv"
@@ -23,7 +23,7 @@ classification.run(daily_price=DAILY_PRICE, close_values=data_set_creator.getVal
 
 #Classification for close values
 (training_set_X, training_set_y), (validation_set_X, validation_set_y) = data_set_creator.getDataSets(type='close_class')
-classification = CloseClassificationLearning(training_set_X, training_set_y, validation_set_X, validation_set_y, data_set_creator.getMedianOfMaxes())
+classification = CloseClassificationLearning(training_set_X, training_set_y, validation_set_X, validation_set_y)
 classification.run(daily_price=DAILY_PRICE, close_values=data_set_creator.getValidationValues("Close"))
 
 '''

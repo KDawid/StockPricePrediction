@@ -26,7 +26,7 @@ class DataSetCreator:
         elif type == 'close_class':
             data_X, data_y = self.__createCloseClassificationLearningData(data, self.USED_DAYS, keys)
         else:
-            raise ValueError("type should be 'regr' or 'class'")
+            raise ValueError("type should be 'regr' or 'high_class' or 'close_class'")
 
         training_set_X, training_set_y = data_X[:-self.VALIDATION_SET_SPLIT], data_y[:-self.VALIDATION_SET_SPLIT]
         validation_set_X, validation_set_y = data_X[-self.VALIDATION_SET_SPLIT:], data_y[-self.VALIDATION_SET_SPLIT:]

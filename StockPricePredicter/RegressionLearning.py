@@ -23,6 +23,7 @@ class RegressionLearning:
     def run(self, daily_price=100):
         self.__printStartPattern()
         self.__calculateBaseline(daily_price)
+        self.__calculateBestAndWorstScenario(daily_price)
         for model in self.models:
             self.__runRegression(model, daily_price)
         self.__printEndPattern()
@@ -33,6 +34,19 @@ class RegressionLearning:
         for i in self.validation_set_y:
             sum.append(i*daily_price)
         print("Baseline: %f$" % np.sum(sum))
+
+    def __calculateBestAndWorstScenario(self, daily_price=1000):
+        best_sum = []
+        worst_sum = []
+        for i in range(len(self.validation_set_y)):
+            if self.validation_set_y[i] > 1.0:
+                best_sum.append(daily_price * self.validation_set_y[i])
+                worst_sum.append(daily_price)
+            else:
+                best_sum.append(daily_price)
+                worst_sum.append(daily_price * self.validation_set_y[i])
+        print("Theoretical maximum price: %f$" % np.sum(best_sum))
+        print("Theoretical minimum price: %f$" % np.sum(worst_sum))
 
     def __runRegression(self, model, daily_price):
         print("------------------------------------------------------------------------------------")
