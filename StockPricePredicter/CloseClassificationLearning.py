@@ -19,6 +19,8 @@ class CloseClassificationLearning:
         self.training_set_y = training_set_y
         self.validation_set_X = validation_set_X
         self.validation_set_y = validation_set_y
+        self.results = dict()
+        self.results['__info__'] = dict()
 
     def run(self, daily_price=1000, close_values=None):
         self.__printStartPattern()
@@ -32,7 +34,11 @@ class CloseClassificationLearning:
         sum = []
         for i in range(len(self.validation_set_y)):
             sum.append(daily_price * close_values[i])
-        print("Baseline: %f$" % np.sum(sum))
+        baseline = np.sum(sum)
+        print("Baseline: %f$" % baseline)
+        self.baseline = baseline
+        self.results['__info__']['baseline'] = baseline
+        self.results['__info__']['daily_price'] = daily_price
 
     def __calculateBestAndWorstScenario(self, daily_price=1000, close_values=None):
         best_sum = []
@@ -46,6 +52,8 @@ class CloseClassificationLearning:
                 worst_sum.append(daily_price * close_values[i])
         print("Theoretical maximum price: %f$" % np.sum(best_sum))
         print("Theoretical minimum price: %f$" % np.sum(worst_sum))
+        self.results['__info__']['theoretical_max'] = np.sum(best_sum)
+        self.results['__info__']['theoretical_min'] = np.sum(worst_sum)
 
     def __runClassification(self, model, daily_price, close_values):
         print("------------------------------------------------------------------------------------")
@@ -59,13 +67,12 @@ class CloseClassificationLearning:
         sum = []
         for i in range(len(stock_price_predictions)):
             if stock_price_predictions[i]:
-                if self.validation_set_y[i]:
-                    sum.append(daily_price*close_values[i])
-                else:
-                    sum.append(daily_price)
+                sum.append(daily_price*close_values[i])
             else:
                 sum.append(daily_price)
-        print("Predicted: %f$" % np.sum(sum))
+        result = np.sum(sum)
+        print("Predicted: %f$" % result)
+        self.results[model_str] = result - self.baseline
 
         self.__calculateConfusions(self.validation_set_y, stock_price_predictions)
         print("\n")

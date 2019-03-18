@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b82a155-e74d-495b-b880-d7544ee16c47" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Saver.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CloseClassificationLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/CloseClassificationLearning.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataSetCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataSetCreator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HighClassificationLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/HighClassificationLearning.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RegressionLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/RegressionLearning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SentimentAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/SentimentAnalyzer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,26 +36,26 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="ini" value="1" />
-          <entry key="py" value="13" />
+          <entry key="py" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="13" />
+          <entry key="Python" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="42" />
           <entry key="ini" value="22" />
-          <entry key="py" value="7463" />
+          <entry key="py" value="8519" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="64" />
-          <entry key="Python" value="7463" />
+          <entry key="Python" value="8519" />
         </counts>
       </usages-collector>
     </session>
@@ -63,10 +65,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="85" lean-forward="true" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+            <state relative-caret-position="17">
+              <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Saver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
-                <element signature="e#0#67#0" expanded="true" />
+                <marker date="1552937392788" expanded="true" signature="32:33" ph="..." />
+                <marker date="1552937392788" expanded="true" signature="32:37" ph="..." />
               </folding>
             </state>
           </provider>
@@ -75,11 +87,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataSetCreator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="65" column="54" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="54" />
+            <state relative-caret-position="607">
+              <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
-                <marker date="1551291293029" expanded="true" signature="3127:3202" ph="..." />
+                <marker date="1552936341172" expanded="true" signature="3452:3527" ph="..." />
               </folding>
             </state>
           </provider>
@@ -88,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SentimentAnalyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" column="56" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="56" />
+            <state relative-caret-position="323">
+              <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -100,7 +112,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SqlConnector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="221">
               <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -124,21 +136,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CloseClassificationLearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+            <state relative-caret-position="493">
+              <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <marker date="1552929336945" expanded="true" signature="1769:2281" ph="..." />
+                <marker date="1552937731696" expanded="true" signature="1978:2499" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/neighbors/classification.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6188">
-              <caret line="373" selection-start-line="373" selection-end-line="373" />
             </state>
           </provider>
         </entry>
@@ -146,8 +149,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HighClassificationLearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+            <state relative-caret-position="595">
+              <caret line="44" column="61" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -158,8 +161,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RegressionLearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+            <state relative-caret-position="241">
+              <caret line="40" column="61" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="40" selection-end-column="61" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -195,18 +198,20 @@
         <option value="$PROJECT_DIR$/SqlConnector.py" />
         <option value="$PROJECT_DIR$/SentimentAnalyzer.py" />
         <option value="$PROJECT_DIR$/DataSetCreator.py" />
-        <option value="$PROJECT_DIR$/HighClassificationLearning.py" />
+        <option value="$PROJECT_DIR$/venv/Saver.py" />
+        <option value="$PROJECT_DIR$/Saver.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/RegressionLearning.py" />
+        <option value="$PROJECT_DIR$/HighClassificationLearning.py" />
         <option value="$PROJECT_DIR$/CloseClassificationLearning.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1553" />
-    <option name="height" value="840" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -221,6 +226,21 @@
               <item name="StockPricePredicter" type="b2602c69:ProjectViewProjectNode" />
               <item name="StockPricePredicter" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="StockPricePredicter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="StockPricePredicter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (StockPricePredicter) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="StockPricePredicter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (StockPricePredicter) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="venv" type="b5f07198:RTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -231,6 +251,11 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\edvikel\Desktop\ELTE\git\StockPricePrediction\StockPricePredicter" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -381,15 +406,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16174497" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12846482" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39148936" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29934925" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -424,22 +449,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database.ini" />
-    <entry file="file://$PROJECT_DIR$/SentimentAnalyzer.py">
+    <entry file="file://$PROJECT_DIR$/Article.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="56" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="56" />
+        <state relative-caret-position="238">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SqlConnector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <marker date="1547911363898" expanded="true" signature="14:19" ph="..." />
           </folding>
         </state>
       </provider>
@@ -451,41 +466,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Article.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <marker date="1547911363898" expanded="true" signature="14:19" ph="..." />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/Saver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="85" lean-forward="true" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
-            <element signature="e#0#67#0" expanded="true" />
+            <marker date="1552937392788" expanded="true" signature="32:33" ph="..." />
+            <marker date="1552937392788" expanded="true" signature="32:37" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataSetCreator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="65" column="54" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="54" />
+        <state relative-caret-position="607">
+          <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
-            <marker date="1551291293029" expanded="true" signature="3127:3202" ph="..." />
+            <marker date="1552936341172" expanded="true" signature="3452:3527" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SentimentAnalyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SqlConnector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RegressionLearning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+        <state relative-caret-position="241">
+          <caret line="40" column="61" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="40" selection-end-column="61" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -494,8 +527,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HighClassificationLearning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        <state relative-caret-position="595">
+          <caret line="44" column="61" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -504,11 +537,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CloseClassificationLearning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        <state relative-caret-position="493">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1552929336945" expanded="true" signature="1769:2281" ph="..." />
+            <marker date="1552937731696" expanded="true" signature="1978:2499" ph="..." />
           </folding>
         </state>
       </provider>
