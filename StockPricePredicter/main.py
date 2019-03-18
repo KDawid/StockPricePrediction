@@ -7,8 +7,10 @@ from Saver import ResultSaver
 USED_DAYS = 5
 VALIDATION_SET_SPLIT = 500
 DAILY_PRICE = 100
-USE_SENTIMENT = ['title', 'snippet']
+
 #USE_SENTIMENT = []
+USE_SENTIMENT = ['title', 'snippet']
+
 CSV_FILE_PATH = "AAPL_normalized.csv"
 
 #Create dataset maker
