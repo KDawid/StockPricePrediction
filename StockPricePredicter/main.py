@@ -5,11 +5,14 @@ from RegressionLearning import RegressionLearning
 from Saver import ResultSaver
 
 USED_DAYS = 5
+#USED_DAYS = 10
 VALIDATION_SET_SPLIT = 500
 DAILY_PRICE = 100
 
-#USE_SENTIMENT = []
-USE_SENTIMENT = ['title', 'snippet']
+USE_SENTIMENT = []
+#USE_SENTIMENT = ['title']
+#USE_SENTIMENT = ['snippet']
+#USE_SENTIMENT = ['title', 'snippet']
 
 CSV_FILE_PATH = "AAPL_normalized.csv"
 
@@ -25,17 +28,17 @@ regr = RegressionLearning(training_set_X, training_set_y, validation_set_X, vali
 regr.run(daily_price=DAILY_PRICE)
 saver.save(regr.results, 'regression.json')
 
-#Classification for high values
-(training_set_X, training_set_y), (validation_set_X, validation_set_y) = data_set_creator.getDataSets(type='high_class')
-classification = HighClassificationLearning(training_set_X, training_set_y, validation_set_X, validation_set_y, data_set_creator.getMedianOfMaxes())
-classification.run(daily_price=DAILY_PRICE, close_values=data_set_creator.getValidationValues("Close"))
-saver.save(classification.results, 'high_classification.json')
-
 #Classification for close values
 (training_set_X, training_set_y), (validation_set_X, validation_set_y) = data_set_creator.getDataSets(type='close_class')
-classification = CloseClassificationLearning(training_set_X, training_set_y, validation_set_X, validation_set_y)
-classification.run(daily_price=DAILY_PRICE, close_values=data_set_creator.getValidationValues("Close"))
-saver.save(classification.results, 'close_classification.json')
+close_classification = CloseClassificationLearning(training_set_X, training_set_y, validation_set_X, validation_set_y)
+close_classification.run(daily_price=DAILY_PRICE, close_values=data_set_creator.getValidationValues("Close"))
+saver.save(close_classification.results, 'close_classification.json')
+
+#Classification for high values
+(training_set_X, training_set_y), (validation_set_X, validation_set_y) = data_set_creator.getDataSets(type='high_class')
+high_classification = HighClassificationLearning(training_set_X, training_set_y, validation_set_X, validation_set_y, data_set_creator.getMedianOfMaxes())
+high_classification.run(daily_price=DAILY_PRICE, close_values=data_set_creator.getValidationValues("Close"))
+saver.save(high_classification.results, 'high_classification.json')
 
 '''
 sum=0

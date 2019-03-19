@@ -73,7 +73,7 @@ class RegressionLearning:
                 sum.append(daily_price)
         result = np.sum(sum)
         print("Predicted: %f$" % result)
-        self.results[model_str] = result - self.baseline
+        self.results[model_str] = float(result - len(self.validation_set_y)*daily_price)
         self.__calculateConfusions(self.validation_set_y, stock_price_predictions)
         print("\n")
 
